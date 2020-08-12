@@ -269,7 +269,7 @@ function blossom_coach_theme_comment( $comment, $args, $depth ){
             <div class="comment-author vcard">
                 <?php 
                     if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); 
-                    printf( __( '<b class="fn" itemprop="creator" itemscope itemtype="http://schema.org/Person">%s <span class="says">says:</span></b>', 'blossom-coach' ), get_comment_author_link() ); 
+                    printf( __( '<b class="fn" itemprop="creator" itemscope itemtype="https://schema.org/Person">%s <span class="says">says:</span></b>', 'blossom-coach' ), get_comment_author_link() ); 
                 ?>
         	</div><!-- .comment-author vcard -->
             <div class="comment-metadata commentmetadata">

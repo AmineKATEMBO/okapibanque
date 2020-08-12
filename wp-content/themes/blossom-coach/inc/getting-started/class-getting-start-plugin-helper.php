@@ -90,11 +90,11 @@ class Blossom_Coach_Getting_Started_Page_Plugin_Helper {
 		);
 		switch ( $state ) {
 			case 'install':
-				$button .= '<a data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="install-now button  " href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="Install ' . esc_attr( $slug ) . '">' . __( 'Install and activate', 'blossom-coach' ) . '</a>';
+				$button .= '<a data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="install-now button  " href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="' . esc_attr__( 'Install ', 'blossom-coach' ) . esc_attr( $slug ) . '">' . __( 'Install and activate', 'blossom-coach' ) . '</a>';
 				break;
 
 			case 'activate':
-				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="activate-now button button-primary" href="' . esc_url( $nonce ) . '" aria-label="Activate ' . esc_attr( $slug ) . '">' . esc_html__( 'Activate', 'blossom-coach' ) . '</a>';
+				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="activate-now button button-primary" href="' . esc_url( $nonce ) . '" aria-label="' . esc_attr__( 'Activate ', 'blossom-coach' ) . esc_attr( $slug ) . '">' . esc_html__( 'Activate', 'blossom-coach' ) . '</a>';
 				break;
 
 			case 'deactivate':
@@ -109,7 +109,7 @@ class Blossom_Coach_Getting_Started_Page_Plugin_Helper {
 					network_admin_url( 'plugins.php' )
 				);
 
-				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="deactivate-now button" href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="Deactivate ' . esc_attr( $slug ) . '">' . esc_html__( 'Deactivate', 'blossom-coach' ) . '</a>';
+				$button .= '<a  data-redirect="' . esc_url( $redirect ) . '" data-slug="' . esc_attr( $slug ) . '" class="deactivate-now button" href="' . esc_url( $nonce ) . '" data-name="' . esc_attr( $slug ) . '" aria-label="' . esc_attr__( 'Deactivate ', 'blossom-coach' ) . esc_attr( $slug ) . '">' . esc_html__( 'Deactivate', 'blossom-coach' ) . '</a>';
 				break;
 
 			case 'enable_cpt':

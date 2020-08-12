@@ -78,7 +78,7 @@ function blossom_coach_sidebar_layout_callback(){
                         <div class="hide-radio radio-image-wrapper" style="float:left; margin-right:30px;">
                             <input id="<?php echo esc_attr( $field['value'] ); ?>" type="radio" name="blossom_coach_sidebar_layout" value="<?php echo esc_attr( $field['value'] ); ?>" <?php checked( $field['value'], $layout ); if( empty( $layout ) ){ checked( $field['value'], 'default-sidebar' ); }?>/>
                             <label class="description" for="<?php echo esc_attr( $field['value'] ); ?>">
-                                <img src="<?php echo esc_url( $field['thumbnail'] ); ?>" alt="" />
+                                <img src="<?php echo esc_url( $field['thumbnail'] ); ?>" alt="<?php echo esc_attr( $field['label'] ); ?>" />
                             </label>
                         </div>
                         <?php 
@@ -103,21 +103,17 @@ function blossom_coach_save_sidebar_layout( $post_id ){
         return;
 
     if ('page' == $_POST['post_type']) {  
-        if (!current_user_can( 'edit_page', $post_id ) )  
-            return $post_id;  
+        if (!current_user_can( 'edit_page', $post_id ) )  return $post_id;  
     } elseif (!current_user_can( 'edit_post', $post_id ) ) {  
-            return $post_id;  
+        return $post_id;  
     }
 
-    foreach( $blossom_coach_sidebar_layout as $field ){  
-        //Execute this saving function
-        $old = get_post_meta( $post_id, '_blossom_coach_sidebar_layout', true ); 
-        $new = sanitize_text_field( $_POST['blossom_coach_sidebar_layout'] );
-        if( $new && $new != $old ) {  
-            update_post_meta( $post_id, '_blossom_coach_sidebar_layout', $new );  
-        }elseif( '' == $new && $old ) {  
-            delete_post_meta( $post_id, '_blossom_coach_sidebar_layout', $old );  
-        } 
-     } // end foreach     
+    $layout = isset( $_POST['blossom_coach_sidebar_layout'] ) ? sanitize_key( $_POST['blossom_coach_sidebar_layout'] ) : 'default-sidebar';
+
+    if ( array_key_exists( $layout, $blossom_coach_sidebar_layout ) ) {
+        update_post_meta( $post_id, '_blossom_coach_sidebar_layout', $layout );
+    } else {
+        delete_post_meta( $post_id, '_blossom_coach_sidebar_layout' );
+    }       
 }
 add_action( 'save_post' , 'blossom_coach_save_sidebar_layout' );

@@ -8,7 +8,7 @@
  * @date 20181231
  */
 
-return $icons = array (
+return array (
     'fab fa-500px',
     'fab fa-accessible-icon',
     'fab fa-accusoft',

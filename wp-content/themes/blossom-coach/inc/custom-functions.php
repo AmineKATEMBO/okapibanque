@@ -205,6 +205,7 @@ function blossom_coach_scripts(){
     wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js' . $build . '/owl.carousel' . $suffix . '.js', array( 'jquery' ), '2.2.1', true );
     wp_enqueue_script( 'owlcarousel2-a11ylayer', get_template_directory_uri() . '/js' . $build . '/owlcarousel2-a11ylayer' . $suffix . '.js', array( 'jquery', 'owl-carousel' ), '0.2.1', true );
 	wp_enqueue_script( 'blossom-coach', get_template_directory_uri() . '/js' . $build . '/custom' . $suffix . '.js', array( 'jquery', 'masonry' ), BLOSSOM_COACH_THEME_VERSION, true );
+    wp_enqueue_script( 'blossom-coach-modal', get_template_directory_uri() . '/js' . $build . '/modal-accessibility' . $suffix . '.js', array( 'jquery' ), BLOSSOM_COACH_THEME_VERSION, true );
     
     $array = array( 
         'rtl'       => is_rtl(),
@@ -420,11 +421,15 @@ function blossom_coach_get_the_archive_title( $title ){
             $title = sprintf( __( '%1$sBrowsing Day%2$s %3$s', 'blossom-coach' ), '<p class="subtitle">', '</p>', '<h1 class="page-title">' . get_the_date( _x( 'F j, Y', 'daily archives date format', 'blossom-coach' ) ) . '</h1>' );
         }
     }elseif( is_post_type_archive() ) {
-        if( $ed_prefix ){
-            $title = '<h1 class="page-title">' . post_type_archive_title( '', false ) . '</h1>';
+        if( is_post_type_archive( 'product' ) ){
+            $title = '<h1 class="page-title">' . get_the_title( get_option( 'woocommerce_shop_page_id' ) ) . '</h1>';
         }else{
-            /* translators: Post type archive title. 1: Post type name */
-            $title = sprintf( __( '%1$sBrowsing Archives%2$s %3$s', 'blossom-coach' ), '<p class="subtitle">', '</p>', '<h1 class="page-title">' . post_type_archive_title( '', false ) . '</h1>' );
+            if( $ed_prefix ){
+                $title = '<h1 class="page-title">' . post_type_archive_title( '', false ) . '</h1>';
+            }else{
+                /* translators: Post type archive title. 1: Post type name */
+                $title = sprintf( __( '%1$sBrowsing Archives%2$s %3$s', 'blossom-coach' ), '<p class="subtitle">', '</p>', '<h1 class="page-title">' . post_type_archive_title( '', false ) . '</h1>' );
+            }
         }
     }elseif( is_tax() ) {
         $tax = get_taxonomy( get_queried_object()->taxonomy );
@@ -441,6 +446,25 @@ function blossom_coach_get_the_archive_title( $title ){
 }
 endif;
 add_filter( 'get_the_archive_title', 'blossom_coach_get_the_archive_title' );
+
+if( ! function_exists( 'blossom_coach_remove_archive_description' ) ) :
+/**
+ * filter the_archive_description & get_the_archive_description to show post type archive
+ * @param  string $description original description
+ * @return string post type description if on post type archive
+ */
+function blossom_coach_remove_archive_description( $description ){
+    $ed_shop_archive_description = get_theme_mod( 'ed_shop_archive_description', false );
+    if( is_post_type_archive( 'product' ) ) {
+        if( ! $ed_shop_archive_description ){
+            $description = '';
+        }
+    }
+    return $description;
+}
+endif;
+add_filter( 'get_the_archive_description', 'blossom_coach_remove_archive_description' );
+
 
 if( ! function_exists( 'blossom_coach_exclude_cat' ) ) :
 /**

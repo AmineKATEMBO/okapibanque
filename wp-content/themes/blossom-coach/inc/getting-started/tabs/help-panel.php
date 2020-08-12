@@ -25,6 +25,6 @@
     <div class="panel-aside">
         <h4><?php esc_html_e( 'View Our Demo', 'blossom-coach' ); ?></h4>
         <p><?php esc_html_e( 'Visit the demo to get more ideas about our theme design.', 'blossom-coach' ); ?></p>
-        <a class="button button-primary" href="<?php echo esc_url( 'https://demo.blossomthemes.com/' . BLOSSOM_COACH_THEME_TEXTDOMAIN . '/' ); ?>" title="<?php esc_attr_e( 'Visit the Demo', 'blossom-coach' ); ?>" target="_blank"><?php esc_html_e( 'View Demo', 'blossom-coach' ); ?></a>
+        <a class="button button-primary" href="<?php echo esc_url( 'https://blossomthemes.com/theme-demo/?theme=blossom-coach' ); ?>" title="<?php esc_attr_e( 'Visit the Demo', 'blossom-coach' ); ?>" target="_blank"><?php esc_html_e( 'View Demo', 'blossom-coach' ); ?></a>
     </div><!-- .panel-aside -->
 </div>

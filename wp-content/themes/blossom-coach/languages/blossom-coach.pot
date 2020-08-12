@@ -1,17 +1,17 @@
 # <!=Copyright (C) 2020 Blossom Themes
-# This file is distributed under the GNU General Public License v2 or later.=!>
+# This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Blossom Coach 1.2.4\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/blossom-coach\n"
-"POT-Creation-Date: 2020-03-17 08:28:21+00:00\n"
+"Project-Id-Version: Blossom Coach 1.2.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2020-07-07 11:56:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 1.0.3\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 
 #: 404.php:16
 msgid "404"
@@ -356,97 +356,97 @@ msgstr ""
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/custom-functions.php:336
+#: inc/custom-functions.php:337
 msgid "Full Name"
 msgstr ""
 
-#: inc/custom-functions.php:336
+#: inc/custom-functions.php:337
 msgid "Name*"
 msgstr ""
 
-#: inc/custom-functions.php:338 inc/customizer/general.php:114
+#: inc/custom-functions.php:339 inc/customizer/general.php:115
 msgid "Email"
 msgstr ""
 
-#: inc/custom-functions.php:338
+#: inc/custom-functions.php:339
 msgid "Email*"
 msgstr ""
 
-#: inc/custom-functions.php:340
+#: inc/custom-functions.php:341
 msgid "Website"
 msgstr ""
 
-#: inc/custom-functions.php:352
+#: inc/custom-functions.php:353
 msgid "Comment"
 msgstr ""
 
-#: inc/custom-functions.php:352
+#: inc/custom-functions.php:353
 msgid "Comment*"
 msgstr ""
 
-#: inc/custom-functions.php:353
+#: inc/custom-functions.php:354
 msgid "Leave a Comment"
 msgstr ""
 
-#: inc/custom-functions.php:392
+#: inc/custom-functions.php:393
 #. translators: Category archive title. 1: Category name
 msgid "%1$sBrowsing Category%2$s %3$s"
 msgstr ""
 
-#: inc/custom-functions.php:399
+#: inc/custom-functions.php:400
 #. translators: Tag archive title. 1: Tag name
 msgid "%1$sBrowsing Tag%2$s %3$s"
 msgstr ""
 
-#: inc/custom-functions.php:406
+#: inc/custom-functions.php:407
 #. translators: Yearly archive title. 1: Year
 msgid "%1$sBrowsing Year%2$s %3$s"
 msgstr ""
 
-#: inc/custom-functions.php:413
+#: inc/custom-functions.php:414
 #. translators: Monthly archive title. 1: Month name and year
 msgid "%1$sBrowsing Month%2$s %3$s"
 msgstr ""
 
-#: inc/custom-functions.php:420
+#: inc/custom-functions.php:421
 #. translators: Daily archive title. 1: Date
 msgid "%1$sBrowsing Day%2$s %3$s"
 msgstr ""
 
-#: inc/custom-functions.php:427
+#: inc/custom-functions.php:431
 #. translators: Post type archive title. 1: Post type name
 msgid "%1$sBrowsing Archives%2$s %3$s"
 msgstr ""
 
-#: inc/custom-functions.php:435
+#: inc/custom-functions.php:440
 #. translators: Taxonomy term archive title. 1: Taxonomy singular name, 2:
 #. Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/custom-functions.php:438
+#: inc/custom-functions.php:443
 msgid "%1$sArchives%2$s"
 msgstr ""
 
-#: inc/custom-functions.php:576
+#: inc/custom-functions.php:600
 msgid "Looking for Something?"
 msgstr ""
 
-#: inc/custom-functions.php:617
+#: inc/custom-functions.php:641
 msgid "Congratulations!"
 msgstr ""
 
-#: inc/custom-functions.php:618
+#: inc/custom-functions.php:642
 msgid ""
 "%1$s is now installed and ready to use. Click below to see theme "
 "documentation, plugins to install and other details to get started."
 msgstr ""
 
-#: inc/custom-functions.php:619
+#: inc/custom-functions.php:643
 msgid "Go to the getting started."
 msgstr ""
 
-#: inc/custom-functions.php:620
+#: inc/custom-functions.php:644
 msgid "Dismiss"
 msgstr ""
 
@@ -522,12 +522,12 @@ msgstr ""
 msgid "Banner Newsletter"
 msgstr ""
 
-#: inc/customizer/frontpage.php:73 inc/customizer/general.php:139
-#: inc/customizer/general.php:610
+#: inc/customizer/frontpage.php:73 inc/customizer/general.php:140
+#: inc/customizer/general.php:634
 msgid "Enter the BlossomThemes Email Newsletters Shortcode. Ex. [BTEN id=\"356\"]"
 msgstr ""
 
-#: inc/customizer/frontpage.php:94 inc/customizer/general.php:157
+#: inc/customizer/frontpage.php:94 inc/customizer/general.php:158
 msgid ""
 "Please install and activate the recommended plugin %1$sBlossomThemes Email "
 "Newsletter%2$s."
@@ -665,184 +665,192 @@ msgstr ""
 msgid "Enable to show Shopping cart in the header."
 msgstr ""
 
-#: inc/customizer/general.php:90
+#: inc/customizer/general.php:91
 msgid "Phone"
 msgstr ""
 
-#: inc/customizer/general.php:138 inc/customizer/general.php:156
+#: inc/customizer/general.php:139 inc/customizer/general.php:157
 msgid "Header Newsletter Shortcode"
 msgstr ""
 
-#: inc/customizer/general.php:168
+#: inc/customizer/general.php:179
+msgid "Shop Page Description"
+msgstr ""
+
+#: inc/customizer/general.php:180
+msgid "Enable to show Shop Page Description."
+msgstr ""
+
+#: inc/customizer/general.php:192
 msgid "Social Media Settings"
 msgstr ""
 
-#: inc/customizer/general.php:189
+#: inc/customizer/general.php:213
 msgid "Enable Social Links"
 msgstr ""
 
-#: inc/customizer/general.php:190
+#: inc/customizer/general.php:214
 msgid "Enable to show social links at header."
 msgstr ""
 
-#: inc/customizer/general.php:212
+#: inc/customizer/general.php:236
 msgid "Social Links"
 msgstr ""
 
-#: inc/customizer/general.php:216
+#: inc/customizer/general.php:240
 msgid "Font Awesome Icon"
 msgstr ""
 
-#: inc/customizer/general.php:217
+#: inc/customizer/general.php:241
 msgid "Example: fa-bell"
 msgstr ""
 
-#: inc/customizer/general.php:221
+#: inc/customizer/general.php:245
 msgid "Link"
 msgstr ""
 
-#: inc/customizer/general.php:222
+#: inc/customizer/general.php:246
 msgid "Example: http://facebook.com"
 msgstr ""
 
-#: inc/customizer/general.php:227
+#: inc/customizer/general.php:251
 msgid "links"
 msgstr ""
 
-#: inc/customizer/general.php:242
+#: inc/customizer/general.php:266
 msgid "SEO Settings"
 msgstr ""
 
-#: inc/customizer/general.php:263
+#: inc/customizer/general.php:287
 msgid "Enable Last Update Post Date"
 msgstr ""
 
-#: inc/customizer/general.php:264
+#: inc/customizer/general.php:288
 msgid "Enable to show last updated post date on listing as well as in single post."
 msgstr ""
 
-#: inc/customizer/general.php:284
+#: inc/customizer/general.php:308
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer/general.php:285
+#: inc/customizer/general.php:309
 msgid "Enable to show breadcrumb in inner pages."
 msgstr ""
 
-#: inc/customizer/general.php:294 inc/extras.php:585
+#: inc/customizer/general.php:318 inc/extras.php:585
 msgid "Home"
 msgstr ""
 
-#: inc/customizer/general.php:304
+#: inc/customizer/general.php:328
 msgid "Breadcrumb Home Text"
 msgstr ""
 
-#: inc/customizer/general.php:315
+#: inc/customizer/general.php:339
 msgid "Posts(Blog) & Pages Settings"
 msgstr ""
 
-#: inc/customizer/general.php:336
+#: inc/customizer/general.php:360
 msgid "Hide Prefix in Archive Page"
 msgstr ""
 
-#: inc/customizer/general.php:337
+#: inc/customizer/general.php:361
 msgid "Enable to hide prefix in archive page."
 msgstr ""
 
-#: inc/customizer/general.php:357
+#: inc/customizer/general.php:381
 msgid "Enable Blog Excerpt"
 msgstr ""
 
-#: inc/customizer/general.php:358
+#: inc/customizer/general.php:382
 msgid "Enable to show excerpt or disable to show full post content."
 msgstr ""
 
-#: inc/customizer/general.php:378
+#: inc/customizer/general.php:402
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/general.php:379
+#: inc/customizer/general.php:403
 msgid "Automatically generated excerpt length (in words)."
 msgstr ""
 
-#: inc/customizer/general.php:393 inc/partials.php:76
-#: inc/template-functions.php:364
+#: inc/customizer/general.php:417 inc/partials.php:76
+#: inc/template-functions.php:373
 msgid "Continue Reading"
 msgstr ""
 
-#: inc/customizer/general.php:404
+#: inc/customizer/general.php:428
 msgid "Read More Text"
 msgstr ""
 
-#: inc/customizer/general.php:428
+#: inc/customizer/general.php:452
 msgid "<hr/>These options affect your individual posts."
 msgstr ""
 
-#: inc/customizer/general.php:448
+#: inc/customizer/general.php:472
 msgid "Show Related Posts"
 msgstr ""
 
-#: inc/customizer/general.php:449
+#: inc/customizer/general.php:473
 msgid "Enable to show related posts in single page."
 msgstr ""
 
-#: inc/customizer/general.php:458 inc/partials.php:85
+#: inc/customizer/general.php:482 inc/partials.php:85
 msgid "You may also like..."
 msgstr ""
 
-#: inc/customizer/general.php:469
+#: inc/customizer/general.php:493
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/general.php:493
+#: inc/customizer/general.php:517
 msgid "Hide Category"
 msgstr ""
 
-#: inc/customizer/general.php:494
+#: inc/customizer/general.php:518
 msgid "Enable to hide category."
 msgstr ""
 
-#: inc/customizer/general.php:514
+#: inc/customizer/general.php:538
 msgid "Hide Post Author"
 msgstr ""
 
-#: inc/customizer/general.php:515
+#: inc/customizer/general.php:539
 msgid "Enable to hide post author."
 msgstr ""
 
-#: inc/customizer/general.php:535
+#: inc/customizer/general.php:559
 msgid "Hide Posted Date"
 msgstr ""
 
-#: inc/customizer/general.php:536
+#: inc/customizer/general.php:560
 msgid "Enable to hide posted date."
 msgstr ""
 
-#: inc/customizer/general.php:556
+#: inc/customizer/general.php:580
 msgid "Show Featured Image"
 msgstr ""
 
-#: inc/customizer/general.php:557
+#: inc/customizer/general.php:581
 msgid "Enable to show featured image in post detail (single page)."
 msgstr ""
 
-#: inc/customizer/general.php:567
+#: inc/customizer/general.php:591
 msgid "Newsletter Settings"
 msgstr ""
 
-#: inc/customizer/general.php:589
+#: inc/customizer/general.php:613
 msgid "Newsletter Section"
 msgstr ""
 
-#: inc/customizer/general.php:590
+#: inc/customizer/general.php:614
 msgid "Enable to show Newsletter Section"
 msgstr ""
 
-#: inc/customizer/general.php:609 inc/customizer/general.php:627
+#: inc/customizer/general.php:633 inc/customizer/general.php:651
 msgid "Newsletter Shortcode"
 msgstr ""
 
-#: inc/customizer/general.php:628
+#: inc/customizer/general.php:652
 msgid ""
 "Please install and activate the recommended plugin %1$sBlossomThemes Email "
 "Newsletter%2$s. After that option related with this section will be visible."
@@ -956,7 +964,7 @@ msgstr ""
 #: inc/extras.php:272
 msgid ""
 "<b class=\"fn\" itemprop=\"creator\" itemscope "
-"itemtype=\"http://schema.org/Person\">%s <span "
+"itemtype=\"https://schema.org/Person\">%s <span "
 "class=\"says\">says:</span></b>"
 msgstr ""
 
@@ -1018,13 +1026,25 @@ msgid ")"
 msgstr ""
 
 #: inc/getting-started/class-getting-start-plugin-helper.php:93
+msgid "Install "
+msgstr ""
+
+#: inc/getting-started/class-getting-start-plugin-helper.php:93
 msgid "Install and activate"
+msgstr ""
+
+#: inc/getting-started/class-getting-start-plugin-helper.php:97
+msgid "Activate "
 msgstr ""
 
 #: inc/getting-started/class-getting-start-plugin-helper.php:97
 #: inc/getting-started/class-getting-start-plugin-helper.php:117
 #: inc/tgmpa/class-tgm-plugin-activation.php:2726
 msgid "Activate"
+msgstr ""
+
+#: inc/getting-started/class-getting-start-plugin-helper.php:112
+msgid "Deactivate "
 msgstr ""
 
 #: inc/getting-started/class-getting-start-plugin-helper.php:112
@@ -1398,51 +1418,71 @@ msgid "All Rights Reserved. "
 msgstr ""
 
 #: inc/template-functions.php:41
+msgid "skip to content"
+msgstr ""
+
+#: inc/template-functions.php:41
 msgid "Skip to Content"
 msgstr ""
 
-#: inc/template-functions.php:202
+#: inc/template-functions.php:60
+msgid "sticky bar close"
+msgstr ""
+
+#: inc/template-functions.php:100
+msgid "search form toggle"
+msgstr ""
+
+#: inc/template-functions.php:104
+msgid "search form close"
+msgstr ""
+
+#: inc/template-functions.php:158
+msgid "Mobile"
+msgstr ""
+
+#: inc/template-functions.php:211
 msgid "All posts by %1$s%2$s%3$s"
 msgstr ""
 
-#: inc/template-functions.php:213
+#: inc/template-functions.php:222
 msgid "You Are Looking For"
 msgstr ""
 
-#: inc/template-functions.php:235
+#: inc/template-functions.php:244
 msgid "%1$sShowing %2$s%3$s Result(s)%4$s"
 msgstr ""
 
-#: inc/template-functions.php:344
+#: inc/template-functions.php:353
 msgid "Pages:"
 msgstr ""
 
-#: inc/template-functions.php:378
+#: inc/template-functions.php:387
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/template-functions.php:412
+#: inc/template-functions.php:421
 msgid "%1$sAbout %2$s%3$s%4$s"
 msgstr ""
 
-#: inc/template-functions.php:451
+#: inc/template-functions.php:460
 msgid "Post Navigation"
 msgstr ""
 
-#: inc/template-functions.php:497
+#: inc/template-functions.php:506
 msgid "Previous"
 msgstr ""
 
-#: inc/template-functions.php:498
+#: inc/template-functions.php:507
 msgid "Next"
 msgstr ""
 
-#: inc/template-functions.php:499
+#: inc/template-functions.php:508
 msgid "Page"
 msgstr ""
 
-#: inc/template-functions.php:635
+#: inc/template-functions.php:644
 msgid " Blossom Coach | Developed By "
 msgstr ""
 
@@ -1450,15 +1490,19 @@ msgstr ""
 msgid "Blossom Themes"
 msgstr ""
 
-#: inc/template-functions.php:637
+#: inc/template-functions.php:646
 msgid " Powered by %s"
 msgstr ""
 
-#: inc/template-functions.php:637
+#: inc/template-functions.php:646
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: inc/template-functions.php:656
+#: inc/template-functions.php:664
+msgid "go to top"
+msgstr ""
+
+#: inc/template-functions.php:665
 msgid "&#10140;"
 msgstr ""
 
@@ -2024,7 +2068,7 @@ msgid ""
 "Schema.org compatible, SEO friendly, RTL compatible, speed optimized, and "
 "translation ready. Check theme details at "
 "https://blossomthemes.com/downloads/blossom-coach-free-wordpress-theme/, "
-"demo at https://demo.blossomthemes.com/blossom-coach/, read the "
+"demo at https://blossomthemes.com/theme-demo/?theme=blossom-coach, read the "
 "documentation at https://docs.blossomthemes.com/docs/blossom-coach/, and "
 "get support at https://blossomthemes.com/support-ticket/."
 msgstr ""
@@ -2121,32 +2165,32 @@ msgctxt "font style"
 msgid "Monospace"
 msgstr ""
 
-#: inc/custom-functions.php:403 inc/custom-functions.php:406
+#: inc/custom-functions.php:404 inc/custom-functions.php:407
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/custom-functions.php:410 inc/custom-functions.php:413
+#: inc/custom-functions.php:411 inc/custom-functions.php:414
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/custom-functions.php:417 inc/custom-functions.php:420
+#: inc/custom-functions.php:418 inc/custom-functions.php:421
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/custom-functions.php:574
+#: inc/custom-functions.php:598
 msgctxt "placeholder"
 msgid "Try searching for what you were looking for&hellip;"
 msgstr ""
 
-#: inc/custom-functions.php:574
+#: inc/custom-functions.php:598
 msgctxt "placeholder"
 msgid "Enter Keywords&hellip;"
 msgstr ""
 
-#: inc/custom-functions.php:580
+#: inc/custom-functions.php:604
 msgctxt "submit button"
 msgid "Search"
 msgstr ""

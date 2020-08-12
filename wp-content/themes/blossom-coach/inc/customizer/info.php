@@ -21,7 +21,7 @@ function blossom_coach_customizer_theme_info( $wp_customize ) {
     );
     
     $theme_info = '<p>';
-	$theme_info .= sprintf( __( 'Demo Link: %1$sClick here.%2$s', 'blossom-coach' ),  '<a href="' . esc_url( 'https://demo.blossomthemes.com/blossom-coach' ) . '" target="_blank">', '</a>' );
+	$theme_info .= sprintf( __( 'Demo Link: %1$sClick here.%2$s', 'blossom-coach' ),  '<a href="' . esc_url( 'https://blossomthemes.com/theme-demo/?theme=blossom-coach' ) . '" target="_blank">', '</a>' );
     $theme_info .= '</p><p>';
     $theme_info .= sprintf( __( 'Documentation Link: %1$sClick here.%2$s', 'blossom-coach' ),  '<a href="' . esc_url( 'https://docs.blossomthemes.com/docs/blossom-coach/' ) . '" target="_blank">', '</a>' );
     $theme_info .= '</p>';

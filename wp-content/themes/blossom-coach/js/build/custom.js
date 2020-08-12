@@ -28,38 +28,46 @@ jQuery(document).ready(function($) {
 
 	//search toggle js
 	$('.header-search > button').click(function(){
-		$(this).siblings('.header-search-form').addClass('active');
-		$('body').addClass('search-active');
+		$('.header-search-form').animate({
+			width: '100%',
+			height: '100%',
+		});
 	});
+	
 	$('.header-search .close').click(function(){
-		$(this).parent('.header-search-form').removeClass('active');
-		$('body').removeClass('search-active');
+		$('.header-search-form').animate({
+			width: '80%',
+			height: '80%',
+		});
 	});
-	$(window).keyup(function(event){
-		if(event.key == "Escape") {
-			$('.header-search-form').removeClass('active');
-			$('body').removeClass('search-active');
+
+	$(window).keyup(function(event) {
+		if(event.key == 'Escape') {
+			$('.header-search-form').animate({
+				width: '80%',
+				height: '80%',
+			});
 		}
 	});
 	
 	$('.main-navigation .toggle-button').click(function(){
-		$(this).parent('.main-navigation').toggleClass('menu-toggled');
+		$('.main-navigation .primary-menu-list').animate({
+			width: 'toggle',
+		});
 	});
-	$('.main-navigation ul li.menu-item-has-children').append('<button class="submenu-toggle"><i class="fa fa-angle-down"></i></button>');
+	$('.main-navigation .close-main-nav-toggle').click(function(){
+		$('.main-navigation .primary-menu-list').animate({
+			width: 'toggle',
+		});
+	});
+	$('.main-navigation ul li.menu-item-has-children').find('> a').after('<button class="submenu-toggle"><i class="fa fa-angle-down"></i></button>');
     $('.main-navigation ul li button').on('click', function(){
         $(this).toggleClass('active');
         $(this).siblings('.main-navigation ul ul').slideToggle();
     });
-    $('.main-navigation .menu').scroll(function(){
-        if($(this).scrollTop() > 20) {
-            $('.main-navigation.menu-toggled .toggle-button').hide();
-        }else{
-            $('.main-navigation.menu-toggled .toggle-button').show();
-        }
-	});
 
 	//for accessibility
-	$('.main-navigation ul li a').focus(function() {
+	$('.main-navigation ul li a, .main-navigation ul li button').focus(function() {
 		$(this).parents('li').addClass('focused');
 	}).blur(function() {
 		$(this).parents('li').removeClass('focused');

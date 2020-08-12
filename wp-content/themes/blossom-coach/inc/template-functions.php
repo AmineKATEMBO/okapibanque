@@ -38,7 +38,7 @@ if( ! function_exists( 'blossom_coach_page_start' ) ) :
 */
 function blossom_coach_page_start(){
     ?>
-    <div id="page" class="site"><a aria-label="skip to content" class="skip-link" href="#content"><?php esc_html_e( 'Skip to Content', 'blossom-coach' ); ?></a>
+    <div id="page" class="site"><a aria-label="<?php esc_attr_e( 'skip to content', 'blossom-coach' ) ; ?>" class="skip-link" href="#content"><?php esc_html_e( 'Skip to Content', 'blossom-coach' ); ?></a>
     <?php
 }
 endif;
@@ -57,7 +57,7 @@ function blossom_coach_top_bar(){
 				<?php echo do_shortcode( wp_kses_post( $newsletter_shortcode ) ); ?>
 			</div>
 		</div>
-        <button aria-label="sticky bar close" class="close"></button>
+        <button aria-label="<?php esc_attr_e( 'sticky bar close', 'blossom-coach' ) ; ?>" class="close"></button>
 	</div>
     <?php
     }
@@ -96,9 +96,12 @@ function blossom_coach_header(){
                     }
                     
                     if( $ed_search ){
-                        echo '<div class="header-search"><button aria-label="search form toggle"><i class="fa fa-search"></i></button><div class="header-search-form"><button aria-label="search form close" class="close"></button>';
-                        get_search_form();
-                        echo '</div></div><!-- .header-seearch -->';
+                        echo '<div class="header-search">
+                        <button aria-label="' . esc_attr__( 'search form toggle', 'blossom-coach' ) . '" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false"><i class="fa fa-search"></i></button>
+                        <div class="header-search-form search-modal cover-modal" data-modal-target-string=".search-modal">
+                        <div class="header-search-inner-wrap">';
+                            get_search_form();
+                        echo '<button aria-label="' . esc_attr__( 'search form close', 'blossom-coach' ) . '" class="close" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false"></button></div></div></div><!-- .header-seearch -->';
                     }	
 				    echo '</div><!-- .top-right -->';
                 } 
@@ -145,18 +148,24 @@ function blossom_coach_header(){
                 <?php endif; ?>
 				<div class="menu-wrap">
 					<nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        <button type="button" class="toggle-button">
+                        <button type="button" class="toggle-button" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".close-main-nav-toggle">
                             <span class="toggle-bar"></span>
                             <span class="toggle-bar"></span>
                             <span class="toggle-bar"></span>
                         </button>
-                        <?php
-            				wp_nav_menu( array(
-            					'theme_location' => 'primary',
-            					'menu_id'        => 'primary-menu',
-                                'fallback_cb'    => 'blossom_coach_primary_menu_fallback',
-            				) );
-            			?>
+                        <div class="primary-menu-list main-menu-modal cover-modal" data-modal-target-string=".main-menu-modal">
+                            <button class="close close-main-nav-toggle" data-toggle-target=".main-menu-modal" data-toggle-body-class="showing-main-menu-modal" aria-expanded="false" data-set-focus=".main-menu-modal"><span></span></button>
+                            <div class="mobile-menu" aria-label="<?php esc_attr_e( 'Mobile', 'blossom-coach' ); ?>">
+                                <?php
+                                    wp_nav_menu( array(
+                                        'theme_location' => 'primary',
+                                        'menu_id'        => 'primary-menu',
+                                        'menu_class'     => 'menu main-menu-modal',
+                                        'fallback_cb'    => 'blossom_coach_primary_menu_fallback',
+                                    ) );
+                                ?>
+                            </div>
+                        </div>
                     </nav><!-- #site-navigation -->					
                     <?php if( blossom_coach_is_woocommerce_activated() && $ed_cart ) blossom_coach_wc_cart_count(); ?>
 				</div><!-- .menu-wrap -->
@@ -652,7 +661,7 @@ if( ! function_exists( 'blossom_coach_back_to_top' ) ) :
  * Back To Top
 */
 function blossom_coach_back_to_top(){ ?>
-    <button aria-label="go to top" class="back-to-top">
+    <button aria-label="<?php esc_attr_e( 'go to top', 'blossom-coach' ); ?>" class="back-to-top">
 		<span><?php esc_html_e( '&#10140;', 'blossom-coach' ); ?></span>
 	</button>
     <?php

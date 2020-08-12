@@ -71,6 +71,7 @@ function blossom_coach_customize_register_general( $wp_customize ) {
 			)
 		)
 	);
+
     
     /** Phone */
     $wp_customize->add_setting(
@@ -159,6 +160,29 @@ function blossom_coach_customize_register_general( $wp_customize ) {
     		)
        );  
     }
+
+    /** Shop Page Description */
+    $wp_customize->add_setting( 
+        'ed_shop_archive_description', 
+        array(
+            'default'           => false,
+            'sanitize_callback' => 'blossom_coach_sanitize_checkbox'
+        ) 
+    );
+    
+    $wp_customize->add_control(
+        new Blossom_Coach_Toggle_Control( 
+            $wp_customize,
+            'ed_shop_archive_description',
+            array(
+                'section'         => 'header_settings',
+                'label'           => __( 'Shop Page Description', 'blossom-coach' ),
+                'description'     => __( 'Enable to show Shop Page Description.', 'blossom-coach' ),
+                'active_callback' => 'blossom_coach_is_woocommerce_activated'
+            )
+        )
+    );
+    
     /** Header Settings Ends */
     
     /** Social Media Settings */
