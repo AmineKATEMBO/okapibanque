@@ -5,9 +5,9 @@ Contributors: Themeansar
 Tags: three-columns, left-sidebar, right-sidebar, custom-colors, custom-logo, featured-images, full-width-template, threaded-comments, blog, e-commerce, entertainment, food-and-drink, news
 Requires at least: 4.0.5
 Tested up to: 5.2.2
-Stable tag: 1.7.6
+Stable tag: 1.7.7
 
-Copyright (c) 2019 by Themeansar
+Copyright (c) 2020 by Themeansar
 
 This Theme is distributed under the terms of the GNU GPL.
 
@@ -87,33 +87,22 @@ This theme uses vadikom/smartmenus
 
 /**** Images Source *****/
 
-============================================
-All images use Pixabay and Unsplash
-============================================
-
-***** Screenshot slider Image CCO by rawpixel  *****/
-	1. https://pixabay.com/en/american-analyzing-brainstorming-3748708/
+***** Screenshot slider Image CCO by Pxhere  *****/
+	1. https://pxhere.com/en/photo/1453379
 	
 /***** service Image *****/
 
-/***** Screenshot First service Image CCO by Unsplash *****/
+/***** Screenshot First service Image CCO by Pxhere *****/
 
-	1.https://pixabay.com/en/people-workplace-desk-break-relax-1209916/
+	1.https://pxhere.com/en/photo/1451441
 	
-/***** Screenshot second service Image CCO by PublicDomainPictures  *****/
+/***** Screenshot second service Image CCO by Stocksnap  *****/
 
-	2.https://pixabay.com/en/baby-boy-caucasian-child-family-164897/
+	2.https://stocksnap.io/photo/shaking-hands-GEKK2UOHCY
 
-/***** Screenshot third service Image CCO by klimkin  *****/
+/***** Screenshot third service Image CCO by Stocksnap  *****/
 
-	3.https://pixabay.com/en/girl-library-books-magazines-1034465/
-	
-
-/***** callout Home Images CCO by Unsplash  *****/
-	1. https://pixabay.com/en/building-windows-facade-modern-919010/
-
-/***** breadcrumb Images CCO Unsplash by Charles Forerunner *****/
-	1.  https://unsplash.com/search/train?photo=gapYVvUg1M8
+	3.https://stocksnap.io/photo/shaking-hands-GEKK2UOHCY
 
 ========================================================================================	
 --- Version 1.0 ----
@@ -334,3 +323,6 @@ All images use Pixabay and Unsplash
 
 --- Version 1.7.6----
 1. Fixed single page code.
+
+--- Version 1.7.7----
+1. Update Screenshot and fix theme reviw plugin issues.

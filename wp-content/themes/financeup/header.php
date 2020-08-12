@@ -143,12 +143,12 @@
               </div>
               <div class="col-md-3 col-sm-3">
                 <div class="ta-header-box wow animated flipInX text-right"> 
-                  <?php $financeup_header_widget_four_label = esc_attr(get_theme_mod('financeup_header_widget_four_label','Get Quote')); 
+                  <?php $financeup_header_widget_four_label = esc_html(get_theme_mod('financeup_header_widget_four_label','Get Quote')); 
                   $financeup_header_widget_four_link = esc_url(get_theme_mod('financeup_header_widget_four_link'));
                   $financeup_header_widget_four_target = esc_attr(get_theme_mod('financeup_header_widget_four_target')); 
 
                     if( !empty($financeup_header_widget_four_label) ):?>
-                      <a href="<?php echo $financeup_header_widget_four_link; ?>" <?php if( $financeup_header_widget_four_target ==true) { echo "target='_blank'"; } ?> class="btn btn-quote"><?php echo esc_attr($financeup_header_widget_four_label); ?></a> 
+                      <a href="<?php echo $financeup_header_widget_four_link; ?>" <?php if( $financeup_header_widget_four_target ==true) { echo "target='_blank'"; } ?> class="btn btn-quote"><?php echo esc_html($financeup_header_widget_four_label); ?></a> 
                     <?php endif; ?>
                 </div>
               </div>

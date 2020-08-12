@@ -41,12 +41,12 @@ if($financeup_callout_background != '') { ?>
 
         <?php if( !empty($financeup_callout_button_one_label) ): ?>
             <a href="<?php echo esc_url($financeup_callout_button_one_link); ?>" <?php if( $financeup_callout_button_one_target == true) { echo "target='_blank'"; } ?> class="btn btn-theme margin-bottom-10">
-          <?php echo esc_attr($financeup_callout_button_one_label); ?></a>
+          <?php echo esc_html($financeup_callout_button_one_label); ?></a>
           <?php
           endif;
 
           if( !empty($financeup_callout_button_two_label) ): ?>
-            <a href="<?php echo esc_url($financeup_callout_button_two_link); ?>" <?php if( $financeup_callout_button_two_target ==true) { echo "target='_blank'"; } ?> class="btn btn-theme-two margin-bottom-10"><?php echo esc_attr($financeup_callout_button_two_label); ?></a>
+            <a href="<?php echo esc_url($financeup_callout_button_two_link); ?>" <?php if( $financeup_callout_button_two_target ==true) { echo "target='_blank'"; } ?> class="btn btn-theme-two margin-bottom-10"><?php echo esc_html($financeup_callout_button_two_label); ?></a>
         <?php endif; ?> 
 
         </div>
