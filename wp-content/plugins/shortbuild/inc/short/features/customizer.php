@@ -1330,6 +1330,49 @@ $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' :
 			'type' => 'text',
 			));
 
+			// Post Content display type
+   			 $wp_customize->add_setting( 'short_post_content_type', array(
+        	'default'           => 'content',
+        	'capability'        => 'edit_theme_options',
+    		) );
+
+		    $wp_customize->add_control( 'short_post_content_type', array(
+		        'type'     => 'radio',
+		        'label'    => esc_html__( 'Blog Post Content Type', 'short' ),
+		        'choices'  => array(
+		            'content'          => esc_html__( 'Content', 'short' ),
+		            'excerpt' => esc_html__( 'Excerpt', 'short' ),
+		        ),
+		        'section'  => 'news_section',
+		        'settings' => 'short_post_content_type',
+		    ) );
+
+
+			    $wp_customize->add_setting(
+					'short_excerpt_length', array(
+			        'capability' => 'edit_theme_options',
+					'default' => __('180','short'),
+			    ) );
+			    $wp_customize->add_control( 'short_excerpt_length', array(
+			        'label' => __('Excerpt length', 'short'),
+			        'section' => 'news_section',
+			        'type' => 'number',
+			    ) );
+
+
+
+			    $wp_customize->add_setting(
+					'news_section_post_count', array(
+			        'capability' => 'edit_theme_options',
+					'default' => __('3','short'),
+			    ) );
+			    $wp_customize->add_control( 'news_section_post_count', array(
+			        'label' => __('Number of Items', 'short'),
+			        'section' => 'news_section',
+			        'type' => 'select',
+			        'choices' => array('3'=>__('3', 'short'),'6' => __('6','short'), '9' => __('9','short'),'12'=> __('12','short')),
+			    ) );
+
 
 }
 

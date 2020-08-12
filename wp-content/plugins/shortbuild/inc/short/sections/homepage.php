@@ -476,7 +476,9 @@ if($short_news_enable !='off'){
         <div class="row">
           
           <!--col-md-4-->
-		  <?php $short_latest_loop = new WP_Query(array( 'post_type' => 'post', 'posts_per_page' => 3, 'order' => 'DESC','ignore_sticky_posts' => true, ''));
+		  <?php 
+		  $news_section_post_count = get_theme_mod('news_section_post_count', __('3','short'));
+		  $short_latest_loop = new WP_Query(array( 'post_type' => 'post', 'posts_per_page' => $news_section_post_count, 'order' => 'DESC','ignore_sticky_posts' => true, ''));
 			if ( $short_latest_loop->have_posts() ) :
 			 while ( $short_latest_loop->have_posts() ) : $short_latest_loop->the_post();?>
           <div class="col-md-4 col-sm-6 col-xs-12">
@@ -498,7 +500,16 @@ if($short_news_enable !='off'){
 						<h3 class="mt-title"><a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>"><?php echo get_the_title() ?></a></h3>	
 					</header>					
 					<div class="entry-content">
-						<?php the_content(__('Read More','short')); ?>
+						<?php $short_post_content_type = get_theme_mod('short_post_content_type','content'); 
+				if($short_post_content_type == 'content') {
+				    the_content(__('Read More','short'));
+					}
+					elseif($short_post_content_type == 'excerpt')
+					{ ?>
+						<p><?php echo shortbuild_news_excerpt(); ?></p>
+
+					<?php }
+					?>
 					</div>
 				</div>
               </article>

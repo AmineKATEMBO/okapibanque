@@ -3,10 +3,12 @@
  * Plugin Name:       ShortBuild
  * Plugin URI:        
  * Description:       Shortbuild plugin is comptible for Themeansar themes.
- * Version:           1.6.7
+ * Version:           1.6.9
  * Author:            managethemes
  * Author URI:        https://managethemes.com
- * License:           GPL-2.0+
+  * License:           GPL-2.0+
+ * Tested up to: 	  5.4.2
+ * Requires: 		  4.6 or higher
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       shortbuild
  * Domain Path:       /languages
@@ -103,5 +105,38 @@ $item_details_page = get_option('item_details_page');
 	update_option( 'item_details_page', 'Done' );
    }
 }
+}
+
+function shortbuild_news_excerpt() {
+    global $post;
+    $excerpt = get_the_content();
+    $excerpt = strip_tags(preg_replace(" (\[.*?\])", '', $excerpt));
+    $excerpt = strip_shortcodes($excerpt);
+    $original_len = strlen($excerpt);
+    $short_excerpt_length = get_theme_mod('short_excerpt_length',180);
+    $excerpt = substr($excerpt, 0, $short_excerpt_length);
+    $len = strlen($excerpt);
+    if ($original_len > 275) {
+        $excerpt = $excerpt;
+        return $excerpt . '<div class="news-excerpt-btn"><a href="' . esc_url(get_permalink()) . '" class="more-link">' . esc_html__("Read More", "shortbuild") . '</a></div>';
+    } else {
+        return $excerpt;
+    }
+}
+
+if ( 'Newses' == $theme->name) {
+require_once('inc/newses/widgets/widgets-common-functions.php');
+require_once ('inc/newses/widgets/widgets-base.php');
+require_once ('inc/newses/widgets/widgets-init.php');
+require_once ('inc/newses/widgets/widgets-common-functions.php');
+/* Theme Widgets*/
+require_once ('inc/newses/widgets/widget-posts-carousel.php');
+require_once ('inc/newses/widgets/widget-posts-double-category.php');
+require_once ('inc/newses/widgets/widget-latest-news.php');
+require_once ('inc/newses/widgets/widget-posts-list.php');
+require_once ('inc/newses/widgets/widget-posts-tabbed.php');
+require_once ('inc/newses/widgets/widget-posts-slider.php');
+require_once ('inc/newses/widgets/featured-post-widget.php');
+require_once ('inc/newses/widgets/widget-design-slider.php');
 }
 ?>

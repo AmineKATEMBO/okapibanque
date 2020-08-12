@@ -3,7 +3,7 @@ Contributors: Managethemes
 Tags: plugin, demo, home page, portfolio, projects, testimonial, callout
 Requires at least: 3.8
 Tested up to: 5.3
-Stable tag: 1.6.7
+Stable tag: 1.6.9
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,14 @@ The ShortBuild plugin features include:
 
 
 == Changelog ==
+= 1.6.9 =
+
+* Fixed Issues.
+
+= 1.6.8 =
+
+* Added Post Excerpt support.
+
 = 1.6.7 =
 
 * Added child theme support.
