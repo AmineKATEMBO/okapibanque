@@ -50,14 +50,14 @@ class businessup_service_widget extends WP_Widget {
                     </div>
                     <?php endif; ?>
 
-                    <h3><?php echo esc_attr($instance['service_title']); ?></h3>
+                    <h3><?php echo esc_html($instance['service_title']); ?></h3>
                     <div class="clearfix"></div>
                    <?php if ( !empty($instance['service_desc']) ): ?>
-					<p><?php echo esc_attr($instance['service_desc']); ?></p>
+					<p><?php echo esc_html($instance['service_desc']); ?></p>
 					<?php endif; ?>
 
                     <?php if ( !empty($instance['btnlink']) ): ?>
-                        <a class="btn btn-theme-three" href="<?php echo esc_url($instance['btnlink']); ?>" target="<?php echo esc_attr($businessup_btn_target); ?>"><?php echo esc_attr($instance['btnmore']); ?></a>
+                        <a class="btn btn-theme-three" href="<?php echo esc_url($instance['btnlink']); ?>" target="<?php echo esc_attr($businessup_btn_target); ?>"><?php echo esc_html($instance['btnmore']); ?></a>
                     <?php endif; ?>  
                 </div>
             </div>
@@ -94,7 +94,7 @@ class businessup_service_widget extends WP_Widget {
 	$instance['fa_icon'] = isset($instance['fa_icon']) ? $instance['fa_icon'] : '';
 	?>
 				<div class="clearfix" style="height: 30px;"></div>
-                <label for="<?php echo $this->get_field_id( 'fa_icon' ); ?>"><?php _e( 'Enter Font Awesome icon class (like: fa-cloud','businessup'); ?> <a href="https://fontawesome.com/v4.7.0/icons/" target="blank" > <?php _e('Find all icons here','businessup');?> </a></label> 
+                <label for="<?php echo $this->get_field_id( 'fa_icon' ); ?>"><?php _e( 'Enter Font Awesome icon class','businessup'); ?></label> 
 				  <input class="widefat" id="<?php echo $this->get_field_id( 'fa_icon' ); ?>" name="<?php echo $this->get_field_name( 'fa_icon' ); ?>" type="text" value="<?php echo esc_attr( $instance['fa_icon'] ); ?>" />
 				</td>
    	
@@ -125,7 +125,7 @@ class businessup_service_widget extends WP_Widget {
             ?>
 
             <input type="text" class="widefat custom_media_url_team" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php if( !empty($instance['image_uri']) ): echo $instance['image_uri']; endif; ?>" style="margin-top:5px;">
-            <input type="button" class="button button-primary custom_media_button_team" id="custom_media_button_team" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php esc_html_e('Upload Image','businessup'); ?>" style="margin-top:5px;">
+            <input type="button" class="button button-primary custom_media_button_team" id="custom_media_button_team" name="<?php echo esc_url($this->get_field_name('image_uri')); ?>" value="<?php esc_attr_e('Upload Image','businessup'); ?>" style="margin-top:5px;">
         </p>
 
         <p>

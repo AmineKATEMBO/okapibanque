@@ -57,7 +57,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-			<h5 class="screen-reader-text"><?php esc_attr_e( 'Comment navigation', 'businessup' ); ?></h5>
+			<h5 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'businessup' ); ?></h5>
 			<div class="nav-links">
 
 				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'businessup' ) ); ?></div>
@@ -71,7 +71,7 @@ if ( post_password_required() ) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() ) : ?>
 
-		<p class="no-comments"><?php esc_attr_e( 'Comments are closed.', 'businessup' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'businessup' ); ?></p>
 	<?php
 	endif;
 	comment_form();

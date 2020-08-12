@@ -25,7 +25,7 @@
 				if(!empty($cat_list)) { ?>
 				<?php the_category(', '); ?>
 				<?php } ?>
-				<a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>"><?php esc_attr_e('by','businessup'); ?>
+				<a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>"><?php esc_html_e('by','businessup'); ?>
 				<?php the_author(); ?>
 				</a> 
 			</div>

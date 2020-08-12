@@ -21,9 +21,9 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post();  
 		 get_template_part('content','');
 		 endwhile; else : ?>
-		<h2><?php esc_attr_e( "Nothing Found", 'businessup' ); ?></h2>
+		<h2><?php esc_html_e( "Nothing Found", 'businessup' ); ?></h2>
 		<div class="">
-		<p><?php esc_attr_e( "Sorry, but nothing matched your search criteria. Please try again with some different keywords.", 'businessup' ); ?>
+		<p><?php esc_html_e( "Sorry, but nothing matched your search criteria. Please try again with some different keywords.", 'businessup' ); ?>
 		</p>
 		<?php get_search_form(); ?>
 		</div><!-- .blog_con_mn -->

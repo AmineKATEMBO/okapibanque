@@ -43,7 +43,7 @@ $businessup_callout_button_two_target = get_theme_mod('businessup_callout_button
       		endif;
 
           if( !empty($businessup_callout_button_two_label) ): ?>
-      		  <a href="<?php echo esc_url($businessup_callout_button_two_link); ?>" <?php if( $businessup_callout_button_two_target ==true) { echo "target='_blank'"; } ?> class="btn btn-theme margin-bottom-10"><?php echo esc_attr($businessup_callout_button_two_label); ?></a>
+      		  <a href="<?php echo esc_url($businessup_callout_button_two_link); ?>" <?php if( $businessup_callout_button_two_target ==true) { echo "target='_blank'"; } ?> class="btn btn-theme margin-bottom-10"><?php echo esc_html($businessup_callout_button_two_label); ?></a>
     		<?php endif; ?>	
         </div>
         </div>

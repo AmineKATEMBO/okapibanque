@@ -8,8 +8,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12">
-			<div class="businessup-breadcrumb-title">
+			     <div class="businessup-breadcrumb-title">
+              <?php if( class_exists( 'WooCommerce' ) && is_shop() ) { ?>
+              <h1>
+              <?php woocommerce_page_title(); ?>
+              </h1>
+              <?php    
+              } else { ?>
               <h1><?php the_title(); ?></h1>
+              <?php } ?>  
             </div>
           </div>
         </div>

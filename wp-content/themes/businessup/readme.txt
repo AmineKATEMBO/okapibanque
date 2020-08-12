@@ -5,7 +5,7 @@ Contributors: Themeansar
 Tags: three-columns, left-sidebar, right-sidebar, custom-colors, custom-logo, featured-images, full-width-template, threaded-comments, blog, e-commerce, entertainment, food-and-drink, news
 Requires at least: 4.0.5
 Tested up to: 4.8.1
-Stable tag: 2.2.5
+Stable tag: 2.2.7
 
 == Theme License & Copyright ==
 Businessup is distributed under the terms of the GNU GPL
@@ -17,7 +17,7 @@ the Free Software Foundation; either version 2 of the License, or
 (at your option) any later version.
 
 =================
-SHORT DESCRIPTION
+DESCRIPTION
 =================
 Businessup WordPress theme ideal for a business or blog website (corporate, Consulting, Advisor, Agency, Finance, law, Photography, freelancers, online presence etc.). You can also use for anything. It comes with all features these kind of Google Fonts, logo upload, slider, service, blog, shop page and much more. The theme you can use for any business website.Work with the most popular page builders as SiteOrigin. Developers will love his extensible codebase making it a joy to customize and extend. Looking for a Multi-Purpose theme? Look no further! Check the demos to realize that it's the only theme you will ever need: https://themeansar.com/demo/wp/businessup/
 
@@ -49,15 +49,17 @@ This theme uses Underscores
 
 /**** Images Source *****/
 ============================================
-***** Screenshot bredcrumb Image CCO by freephotocc  *****/
-1. https://www.pexels.com/photo/man-and-woman-handshake-567633/
+* Screenshot Banner Image - https://stocksnap.io/photo/shaking-hands-GEKK2UOHCY
+License: CC0 1.0 Universal (CC0 1.0)
 
-***** Screenshot Blog Image CCO Free-Photos *****/
-2. https://pixabay.com/en/woman-working-business-woman-laptop-690036/
+* Thumbnail Image one - https://stocksnap.io/photo/woman-thinking-MLZIHL9GLY
+License: CC0 1.0 Universal (CC0 1.0)
 
-***** Slider image *****/
-3. https://www.pexels.com/photo/woman-sitting-on-chair-near-laptop-computer-1089555/
+* Thumbnail Image two - https://pxhere.com/en/photo/1451427
+License: CC0 Public Domain
 
+* Thumbnail Image three - https://pxhere.com/en/photo/1433389
+License: CC0 Public Domain
 
 ========================================================================================	
 --- Version 0.1 ----
@@ -164,3 +166,7 @@ This theme uses Underscores
 1. Added selective refresh for header.
 -- Version 2.2.5----
 1. Added ping back URL.
+-- Version 2.2.6----
+1. Fixed escaping issues.
+-- Version 2.2.7----
+1. Fixed shop page title issue.

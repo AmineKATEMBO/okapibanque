@@ -293,4 +293,11 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+add_filter( 'woocommerce_show_page_title', 'businessup_hide_shop_page_title' );
+
+function businessup_hide_shop_page_title( $title ) {
+    if ( is_shop() ) $title = false;
+    return $title;
+}
 ?>

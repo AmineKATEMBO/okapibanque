@@ -57,14 +57,14 @@ class businessup_slider_widget extends WP_Widget {
           <div class="inner-table-cell">
             <div class="slide-caption slide">
              <div class="slide-inner-Default">
-              <h1><?php echo esc_attr($instance['slider_title']); ?></h1>
+              <h1><?php echo esc_html($instance['slider_title']); ?></h1>
               <div class="description">
 				<?php if ( !empty($instance['slider_desc']) ): ?>
-                <p><?php echo esc_attr($instance['slider_desc']); ?></p>
+                <p><?php echo esc_html($instance['slider_desc']); ?></p>
                 <?php endif; ?>
               </div>
                <?php if ( !empty($instance['btnonelink']) ): ?>
-                <a class="btn btn-tislider"  href="<?php echo esc_url($instance['btnonelink']); ?>" target="<?php echo esc_attr($businessup_btnone_target); ?>"><?php echo esc_attr($instance['btnone']); ?></a>
+                <a class="btn btn-tislider"  href="<?php echo esc_url($instance['btnonelink']); ?>" target="<?php echo esc_attr($businessup_btnone_target); ?>"><?php echo esc_html($instance['btnone']); ?></a>
                 <?php endif; ?>   
                 </div> 
             </div>
@@ -104,14 +104,14 @@ class businessup_slider_widget extends WP_Widget {
 				
 				</div>	
 				<td>
-                    <label for="<?php echo $this->get_field_id('slider_title'); ?>"><?php esc_attr_e('Title', 'businessup'); ?></label>
+                    <label for="<?php echo $this->get_field_id('slider_title'); ?>"><?php esc_html_e('Title', 'businessup'); ?></label>
                 </td>
 				<td>
                     <input type="text" name="<?php echo $this->get_field_name('slider_title'); ?>" id="<?php echo $this->get_field_id('slider_title'); ?>" value="<?php if( !empty($instance['slider_title']) ): echo $instance['slider_title']; endif; ?>" class="widefat"/>
                 </td>
 				
 				<td>
-                    <label for="<?php echo $this->get_field_id('slider_desc'); ?>"><?php esc_attr_e('Description', 'businessup'); ?></label>
+                    <label for="<?php echo $this->get_field_id('slider_desc'); ?>"><?php esc_html_e('Description', 'businessup'); ?></label>
                 </td>
                <?php if ( !empty($instance['slider_desc']) ) : ?>
 				<td>
@@ -119,7 +119,7 @@ class businessup_slider_widget extends WP_Widget {
                 </td>
             <?php endif; ?>
 				<p>
-            <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php esc_attr_e('Image', 'businessup'); ?></label><br/>
+            <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php esc_html_e('Image', 'businessup'); ?></label><br/>
 
             <?php
 
@@ -132,16 +132,16 @@ class businessup_slider_widget extends WP_Widget {
             ?>
 
             <input type="text" class="widefat custom_media_url_team" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php if( !empty($instance['image_uri']) ): echo $instance['image_uri']; endif; ?>" style="margin-top:5px;">
-            <input type="button" class="button button-primary custom_media_button_team" id="custom_media_button_team" name="<?php echo $this->get_field_name('image_uri'); ?>" value="<?php esc_attr_e('Upload Image','businessup'); ?>" style="margin-top:5px;">
+            <input type="button" class="button button-primary custom_media_button_team" id="custom_media_button_team" name="<?php echo esc_url($this->get_field_name('image_uri')); ?>" value="<?php esc_attr_e('Upload Image','businessup'); ?>" style="margin-top:5px;">
         </p>
 			
         <table>
 			<tr>
                 <td style="width: 50%;">
-                    <label for="<?php echo $this->get_field_id('btnone'); ?>"><?php esc_attr_e('Button Text', 'businessup'); ?></label>
+                    <label for="<?php echo $this->get_field_id('btnone'); ?>"><?php esc_html_e('Button Text', 'businessup'); ?></label>
                 </td>
                 <td>
-                    <label for="<?php echo $this->get_field_id('btnonelink'); ?>"><?php esc_attr_e('Button Link', 'businessup'); ?></label>
+                    <label for="<?php echo $this->get_field_id('btnonelink'); ?>"><?php esc_html_e('Button Link', 'businessup'); ?></label>
                 </td>
             </tr>
             <tr>
@@ -154,7 +154,7 @@ class businessup_slider_widget extends WP_Widget {
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="checkbox" name="<?php echo $this->get_field_name('open_btnone_new_window'); ?>" id="<?php echo $this->get_field_id('open_btnone_new_window'); ?>" <?php if( !empty($instance['open_btnone_new_window']) ): checked( (bool) $instance['open_btnone_new_window'], true ); endif; ?> ><?php esc_attr_e( 'Open link in a new tab','businessup' ); ?>
+                    <input type="checkbox" name="<?php echo $this->get_field_name('open_btnone_new_window'); ?>" id="<?php echo $this->get_field_id('open_btnone_new_window'); ?>" <?php if( !empty($instance['open_btnone_new_window']) ): checked( (bool) $instance['open_btnone_new_window'], true ); endif; ?> ><?php esc_html_e( 'Open link in a new tab','businessup' ); ?>
                 </td>
             </tr>
         </table>

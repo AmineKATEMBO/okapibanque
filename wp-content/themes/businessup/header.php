@@ -50,7 +50,7 @@
                   $businessup_header_widget_four_link = get_theme_mod('businessup_header_widget_four_link');
                   $businessup_header_widget_four_target = get_theme_mod('businessup_header_widget_four_target'); 
 				  if( !empty($businessup_header_widget_four_label) ):?>
-                      <a href="<?php echo esc_url($businessup_header_widget_four_link); ?>" <?php if( $businessup_header_widget_four_target ==true) { echo "target='_blank'"; } ?> class="btn btn-theme quote"><?php echo esc_attr($businessup_header_widget_four_label); ?></a> 
+                      <a href="<?php echo esc_url($businessup_header_widget_four_link); ?>" <?php if( $businessup_header_widget_four_target ==true) { echo "target='_blank'"; } ?> class="btn btn-theme quote"><?php echo esc_html($businessup_header_widget_four_label); ?></a> 
                   <?php endif; ?>
 
 

@@ -44,7 +44,7 @@ get_template_part('index','banner'); ?>
           <div class="col-md-12">
             <div class="media businessup-info-author-block"> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) );?>" class="businessup-author-pic"> <?php echo get_avatar( get_the_author_meta( 'ID') , 150); ?> </a>
               <div class="media-body">
-                <h4 class="media-heading"><span><i class="fa fa-user"></i><?php esc_attr_e('by','businessup'); ?></span><a href "<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) );?>"><?php the_author(); ?></a></h4>
+                <h4 class="media-heading"><span><i class="fa fa-user"></i><?php esc_html_e('by','businessup'); ?></span><a href "<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) );?>"><?php the_author(); ?></a></h4>
                 <p><?php the_author_meta( 'description' ); ?></p>
                 <div class="row">
                   <div class="col-md-6 col-pad7">

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Businessup\n"
-"POT-Creation-Date: 2020-02-13 10:53+0530\n"
-"PO-Revision-Date: 2020-02-13 10:53+0530\n"
+"POT-Creation-Date: 2020-06-17 13:26+0530\n"
+"PO-Revision-Date: 2020-06-17 13:22+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -70,39 +70,35 @@ msgstr ""
 msgid "Theme by %1$s"
 msgstr ""
 
-#: footer.php:39 functions.php:94
+#: footer.php:39 functions.php:96
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:95
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:93
-msgid "Top Menu"
-msgstr ""
-
-#: functions.php:187
+#: functions.php:189
 msgid "Sidebar Widget Area"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:199
 msgid "Footer Widget Area"
 msgstr ""
 
-#: functions.php:207
+#: functions.php:209
 msgid "Service Widget Area"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:231
 msgid "Slider Widgets Area"
 msgstr ""
 
-#: functions.php:264 functions.php:272
+#: functions.php:266 functions.php:274
 msgid "Read More"
 msgstr ""
 
-#: header.php:166
+#: header.php:169
 msgid "Toggle navigation"
 msgstr ""
 
@@ -287,24 +283,24 @@ msgstr ""
 msgid "Processing..."
 msgstr ""
 
-#: inc/ansar/getting-started.php:47
+#: inc/ansar/getting-started.php:48
 #, php-format
 msgid ""
 "Welcome! Thank you for choosing %1$s!. To fully take advantage of the best "
 "our theme can offer, get started."
 msgstr ""
 
-#: inc/ansar/getting-started.php:47
+#: inc/ansar/getting-started.php:48
 msgid ""
 "Clicking on Get Started with Businessup Button and create exact demo replica "
 "of the"
 msgstr ""
 
-#: inc/ansar/getting-started.php:47
+#: inc/ansar/getting-started.php:48
 msgid "Businessup theme"
 msgstr ""
 
-#: inc/ansar/getting-started.php:47
+#: inc/ansar/getting-started.php:48
 #, php-format
 msgid "Get started with %s"
 msgstr ""
@@ -313,7 +309,7 @@ msgstr ""
 msgid "Sorry, you are not allowed to install plugins on this site."
 msgstr ""
 
-#: inc/ansar/getting-started.php:156
+#: inc/ansar/getting-started.php:148
 msgid "Unable to connect to the filesystem. Please confirm your credentials."
 msgstr ""
 
@@ -438,11 +434,7 @@ msgid "BUP - Service Widget"
 msgstr ""
 
 #: inc/ansar/widget/businessup-service.php:97
-msgid "Enter Font Awesome icon class (like: fa-cloud"
-msgstr ""
-
-#: inc/ansar/widget/businessup-service.php:97
-msgid "Find all icons here"
+msgid "Enter Font Awesome icon class"
 msgstr ""
 
 #: inc/ansar/widget/businessup-service.php:115
