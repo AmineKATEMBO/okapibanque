@@ -2,15 +2,16 @@
 
 Contributors: blossomthemes
 Requires at least: 4.7
-Tested up to: 5.3.2
-Stable tag: 1.0.6
+Tested up to: 5.4.2
+Stable tag: 1.0.7
 Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce
 
 == Description ==
-Life coach is a free WordPress coaching theme designed to create websites for coach, mentors, speakers and therapists. You can easily use this theme to create stunning website without any knowledge of coding. The theme is designed with features that highlights you and yours services that will help to improve your followings. The theme is also multi-purpose. So you can also use it to build small business (restaurants/cafe, travel, education, hotel, construction, events, wedding planners, fitness, affiliate, fashion, lawyer, consulting, sport/medical shops, spa/temas, political), portfolio, church, online agencies and firms, charity, ecommerce (WooCommerce), and freelancers websites. It is responsive, Schema.org compatible, SEO friendly, RTL compatible, speed optimized, and translation ready. Check theme details at https://blossomthemes.com/downloads/life-coach-free-wordpress-theme/, demo at https://demo.blossomthemes.com/life-coach/, read the documentation at https://docs.blossomthemes.com/docs/life-coach/, and get support at https://blossomthemes.com/support-ticket/.
+Life coach is a free WordPress coaching theme designed to create websites for coach, mentors, speakers and therapists. You can easily use this theme to create stunning website without any knowledge of coding. The theme is designed with features that highlights you and yours services that will help to improve your followings. The theme is also multi-purpose. So you can also use it to build small business (restaurants/cafe, travel, education, hotel, construction, events, wedding planners, fitness, affiliate, fashion, lawyer, consulting, sport/medical shops, spa/temas, political), portfolio, church, online agencies and firms, charity, ecommerce (WooCommerce), and freelancers websites. It is responsive, Schema.org compatible, SEO friendly, RTL compatible, speed optimized, and translation ready. Check theme details at https://blossomthemes.com/downloads/life-coach-free-wordpress-theme/, demo at https://blossomthemes.com/theme-demo/?theme=life-coach, read the documentation at https://docs.blossomthemes.com/docs/life-coach/, and get support at https://blossomthemes.com/support-ticket/.
 
 == Installation ==
 
@@ -44,6 +45,10 @@ All other images including icon image and images used in customizer settings are
 
 == Changelog ==
 	
+	1.0.7 - July 07, 2020
+        * Fixed: accessibility issue
+        * Modified: demo link
+
 	1.0.6 - February 13, 2020
         * Fixed: responsive design issues
 

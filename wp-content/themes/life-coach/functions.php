@@ -54,7 +54,7 @@ function life_coach_customize_register( $wp_customize ){
     );
     
     $theme_info = '<p>';
-	$theme_info .= sprintf( __( 'Demo Link: %1$sClick here.%2$s', 'life-coach' ),  '<a href="' . esc_url( 'https://demo.blossomthemes.com/life-coach' ) . '" target="_blank">', '</a>' );
+	$theme_info .= sprintf( __( 'Demo Link: %1$sClick here.%2$s', 'life-coach' ),  '<a href="' . esc_url( 'https://blossomthemes.com/theme-demo/?theme=life-coach' ) . '" target="_blank">', '</a>' );
     $theme_info .= '</p><p>';
     $theme_info .= sprintf( __( 'Documentation Link: %1$sClick here.%2$s', 'life-coach' ),  '<a href="' . esc_url( 'https://docs.blossomthemes.com/docs/life-coach/' ) . '" target="_blank">', '</a>' );
     $theme_info .= '</p>';
