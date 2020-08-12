@@ -1,0 +1,401 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: financeup\n"
+"POT-Creation-Date: 2020-02-13 10:39+0530\n"
+"PO-Revision-Date: 2020-02-13 10:37+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:17
+msgid "404"
+msgstr ""
+
+#: 404.php:32
+msgid "4"
+msgstr ""
+
+#: 404.php:34
+msgid "Oops! Page not found"
+msgstr ""
+
+#: 404.php:37
+msgid "We are sorry, but the page you are looking for does not exist."
+msgstr ""
+
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One Comments &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:39 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:42 comments.php:63
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:43 comments.php:64
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:38 templates/fullwidth.php:32
+msgid "Pages:"
+msgstr ""
+
+#: content.php:46 sections/home-blog.php:61
+msgid "by"
+msgstr ""
+
+#: footer.php:27
+#, php-format
+msgid "Theme by %1$s"
+msgstr ""
+
+#: functions.php:76
+msgid "Primary menu"
+msgstr ""
+
+#: functions.php:77
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:151
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:161
+msgid "Footer Widget Area"
+msgstr ""
+
+#: functions.php:187
+msgid "Service section widgets"
+msgstr ""
+
+#: functions.php:226
+msgid "Read More"
+msgstr ""
+
+#: header.php:23
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:163
+msgid "Toggle Navigation"
+msgstr ""
+
+#: inc/ansar/customize/customize-pro/class-customize.php:64
+msgid "Financeup Pro Available!"
+msgstr ""
+
+#: inc/ansar/customize/customize-pro/class-customize.php:65
+msgid "Go Pro"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:7
+msgid "Footer Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:12
+msgid "Social Link"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:23
+#: inc/ansar/customize/ta_customize_top_header.php:57
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:34
+#: inc/ansar/customize/ta_customize_copyright.php:55
+#: inc/ansar/customize/ta_customize_copyright.php:77
+#: inc/ansar/customize/ta_customize_copyright.php:99
+#: inc/ansar/customize/ta_customize_homepage.php:251
+#: inc/ansar/customize/ta_customize_homepage.php:291
+#: inc/ansar/customize/ta_customize_top_header.php:68
+#: inc/ansar/customize/ta_customize_top_header.php:89
+#: inc/ansar/customize/ta_customize_top_header.php:111
+#: inc/ansar/customize/ta_customize_top_header.php:133
+msgid "Open link in a new tab"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:44
+#: inc/ansar/customize/ta_customize_top_header.php:78
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:65
+#: inc/ansar/customize/ta_customize_top_header.php:99
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_copyright.php:87
+#: inc/ansar/customize/ta_customize_top_header.php:121
+msgid "Google-plus URL"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:7
+msgid "Choose Post"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:15
+msgid "Homepage section settings"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:25
+msgid "Slider Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:39
+msgid "Enable Slider Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:51
+#: inc/ansar/customize/ta_customize_homepage.php:64
+#: inc/ansar/customize/ta_customize_homepage.php:77
+msgid "Select Post"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:92
+msgid "Service Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:105
+msgid "Enable Service Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:118
+#: inc/ansar/customize/ta_customize_homepage.php:199
+#: inc/ansar/customize/ta_customize_homepage.php:359
+#: inc/ansar/customize/ta_customize_top_header.php:167
+#: inc/ansar/customize/ta_customize_top_header.php:214
+#: inc/ansar/customize/ta_customize_top_header.php:261
+msgid "Title"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:130
+#: inc/ansar/customize/ta_customize_homepage.php:212
+#: inc/ansar/customize/ta_customize_homepage.php:372
+#: inc/ansar/customize/ta_customize_top_header.php:180
+#: inc/ansar/customize/ta_customize_top_header.php:227
+#: inc/ansar/customize/ta_customize_top_header.php:274
+msgid "Description"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:143
+msgid "Callout Setting"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:156
+msgid "Enable Callout Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:169
+#: inc/ansar/customize/ta_customize_homepage.php:330
+msgid "Background Image"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:182
+#: inc/ansar/customize/ta_customize_homepage.php:343
+msgid "Overlay Color"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:225
+#: inc/ansar/customize/ta_customize_homepage.php:265
+#: inc/ansar/customize/ta_customize_top_header.php:295
+msgid "Button Text"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:238
+#: inc/ansar/customize/ta_customize_homepage.php:278
+#: inc/ansar/customize/ta_customize_top_header.php:307
+msgid "Button Link"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:305
+msgid "Blog Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_homepage.php:318
+msgid "Enable Blog Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:7
+msgid "Header Section"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:11
+msgid "Header Contact Info"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:22
+msgid "Info One:"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:35
+msgid "Info Two:"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:47
+msgid "Social Icon"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:141
+msgid "Header Widget One Setting"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:154
+#: inc/ansar/customize/ta_customize_top_header.php:201
+#: inc/ansar/customize/ta_customize_top_header.php:248
+msgid "Icon"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:188
+msgid "Header Widget Two Setting"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:235
+msgid "Header Widget Three Setting"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:282
+msgid "Header Widget Four Setting"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:291
+msgid "Get Quote"
+msgstr ""
+
+#: inc/ansar/customize/ta_customize_top_header.php:319
+msgid "Open Link New window"
+msgstr ""
+
+#: inc/ansar/financeup-custom-navwalker.php:177
+msgid "Home"
+msgstr ""
+
+#: inc/ansar/template-tags.php:28
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/ansar/template-tags.php:33
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/ansar/template-tags.php:50 inc/ansar/template-tags.php:56
+msgid ", "
+msgstr ""
+
+#: inc/ansar/template-tags.php:52
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/ansar/template-tags.php:58
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/ansar/template-tags.php:64
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/ansar/template-tags.php:64
+msgid "1 Comment"
+msgstr ""
+
+#: inc/ansar/template-tags.php:64
+msgid "% Comments"
+msgstr ""
+
+#: inc/ansar/template-tags.php:71
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/ansar/widget/financeup-service.php:13
+msgid "Financeup - Service Widget"
+msgstr ""
+
+#: inc/ansar/widget/financeup-service.php:14
+msgid "Service Section Widget"
+msgstr ""
+
+#: inc/ansar/widget/financeup-service.php:64
+msgid "Select Pages:"
+msgstr ""
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:22
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:24
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: searchform.php:3
+msgid "type to search"
+msgstr ""
+
+#: single.php:62
+msgid "By"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "financeup"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://themeansar.com/free-themes/financeup"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Financeup is a modern WordPress theme for professionals. It fits creative "
+"business, small businesses, finance, startups, corporate businesses, online "
+"agencies and firms, portfolios, ecommerce (WooCommerce), and freelancers. "
+"The theme is responsive, WPML, Retina ready, SEO friendly, The theme is "
+"responsive, Elementor, Gutenberg compatible, SEO friendly, translation ready "
+"and major WordPress plugins compatible. (Live preview : https://themeansar."
+"com/demo/wp/financeup/default/)"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Themeansar"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.themeansar.com/"
+msgstr ""

@@ -1,0 +1,290 @@
+# Translation of Plugins - Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP) - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP) - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-06 15:50:21+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP) - Stable (latest release)\n"
+
+#: lite/includes/admin/reports/report-realtime.php:22
+msgid "Real Time"
+msgstr "Temps réel"
+
+#: lite/includes/admin/reports/report-year-in-review.php:22
+msgid "Year in Review"
+msgstr "Bilan de l’année"
+
+#: lite/includes/admin/welcome.php:52 lite/includes/admin/welcome.php:53
+msgid "Welcome to ExactMetrics"
+msgstr "Bienvenue sur ExactMetrics"
+
+#: lite/includes/admin/wp-site-health.php:53
+msgid "ExactMetrics Authentication"
+msgstr "Authentification ExactMetrics"
+
+#: lite/includes/admin/wp-site-health.php:179
+msgid "View Reports"
+msgstr "Voir les rapports"
+
+#: lite/includes/admin/wp-site-health.php:233
+msgid "Go to License Settings"
+msgstr "Aller aux réglages de licence"
+
+#: lite/includes/admin/tools.php:12
+msgid "Click here to Upgrade"
+msgstr "Cliquez ici pour mettre à niveau"
+
+#. Translators: The error message received.
+#: lite/includes/admin/wp-site-health.php:391
+msgid "Error message: %s"
+msgstr "Message d’erreur : %s"
+
+#: languages/vue.php:1961
+msgid "Performance"
+msgstr "Performance"
+
+#: languages/vue.php:1995
+msgid "Yes, hide it!"
+msgstr "Oui, masquez-le !"
+
+#: languages/vue.php:2011
+msgid "Paste your license key here"
+msgstr "Collez votre clé de licence ici"
+
+#: languages/vue.php:2017
+msgid "Verify"
+msgstr "Vérifier"
+
+#: languages/vue.php:2026
+msgid "Relaunch Setup Wizard"
+msgstr "Relancer l’assistant de configuration"
+
+#: languages/vue.php:2058
+msgid "Activating..."
+msgstr "Activation…"
+
+#: languages/vue.php:2061
+msgid "Deactivating..."
+msgstr "Désactivation…"
+
+#: languages/vue.php:2064
+msgid "Deactivate"
+msgstr "Désactiver"
+
+#: languages/vue.php:2067
+msgid "Upgrade"
+msgstr "Mettre à niveau"
+
+#: languages/vue.php:2113
+msgid "Show"
+msgstr "Afficher"
+
+#. Translators: The number of results.
+#: languages/vue.php:2117
+msgid "%s results"
+msgstr "%s résultats"
+
+#: languages/vue.php:2123
+msgid "Your site is connected to ExactMetrics!"
+msgstr "Votre site est connecté à ExactMetrics !"
+
+#: languages/vue.php:1982
+msgid "Allow usage tracking"
+msgstr "Autoriser le suivi de l'utilisation"
+
+#: languages/vue.php:1998
+msgid "No, cancel!"
+msgstr "Non, annuler !"
+
+#: languages/vue.php:2020
+msgid "Setup Wizard"
+msgstr "Assistant de configuration"
+
+#: languages/vue.php:2042
+msgid "See all features"
+msgstr "Voir toutes les fonctionnalités"
+
+#: languages/vue.php:2080
+msgid "Upgrade to"
+msgstr "Mettre à niveau vers"
+
+#: languages/vue.php:2083
+msgid "Last 30 days"
+msgstr "30 derniers jours"
+
+#: languages/vue.php:1807
+msgid "No options available"
+msgstr "Aucune option disponible"
+
+#: languages/vue.php:1810
+msgid "Network Active"
+msgstr "Activé sur le réseau"
+
+#: languages/vue.php:1967
+msgid "Miscellaneous"
+msgstr "Divers"
+
+#: languages/vue.php:2014
+msgid "Google Authentication"
+msgstr "Authentification Google"
+
+#: languages/vue.php:1052
+msgid "Not Available"
+msgstr "Non disponible"
+
+#: languages/vue.php:1064
+msgid "Limited Support"
+msgstr "Support limité"
+
+#: languages/vue.php:1067
+msgid "Priority Support"
+msgstr "Support prioritaire"
+
+#: languages/vue.php:1073
+msgid "Feature"
+msgstr "Fonctionnalité"
+
+#: languages/vue.php:1079
+msgid "Pro"
+msgstr "Pro"
+
+#: languages/vue.php:1774
+msgid "Desktop"
+msgstr "Ordinateur de bureau"
+
+#: languages/vue.php:1777
+msgid "Tablet"
+msgstr "Tablette"
+
+#: languages/vue.php:1780
+msgid "Mobile"
+msgstr "Mobile"
+
+#: languages/vue.php:1783
+msgid "Top 10 Countries"
+msgstr "Top 10 des pays"
+
+#: languages/vue.php:1786
+msgid "View Countries Report"
+msgstr "Voir le rapport sur les pays"
+
+#: languages/vue.php:1789
+msgid "Top 10 Referrals"
+msgstr "Top 10 des référents"
+
+#: languages/vue.php:1792
+msgid "View All Referral Sources"
+msgstr "Afficher toutes les sources référentes"
+
+#: languages/vue.php:1076
+msgid "Lite"
+msgstr "Lite"
+
+#: includes/admin/tracking.php:242
+msgid "Once Weekly"
+msgstr "Une fois par semaine"
+
+#: includes/admin/review.php:128
+msgid "No thanks"
+msgstr "Non merci"
+
+#: languages/vue.php:1973
+msgid "Hide Announcements"
+msgstr "Masquer les annonces"
+
+#. Author of the plugin
+#: lite/includes/admin/wp-site-health.php:172
+#: lite/includes/admin/wp-site-health.php:224
+#: lite/includes/admin/wp-site-health.php:251
+#: lite/includes/admin/wp-site-health.php:289
+#: lite/includes/admin/wp-site-health.php:316
+#: lite/includes/admin/wp-site-health.php:343
+#: lite/includes/admin/wp-site-health.php:368
+#: lite/includes/admin/wp-site-health.php:407
+#: lite/includes/admin/dashboard-widget.php:97 includes/admin/admin.php:31
+#: includes/admin/admin.php:34 includes/admin/admin.php:42
+msgid "ExactMetrics"
+msgstr "ExactMetrics"
+
+#: languages/vue.php:1970
+msgid "Hides plugin announcements and update details. This includes critical notices we use to inform about deprecations and important required configuration changes."
+msgstr "Masque les annonces de l&rsquo;extension et le détail des mises à jour. Ceci inclut des notifications cruciales que nous utilisons pour annoncer des obsolescences et d'importantes modifications obligatoires de configuration."
+
+#: languages/vue.php:1976
+msgid "Usage Tracking"
+msgstr "Suivi d’utilisation"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://exactmetrics.com"
+msgstr "https://exactmetrics.com"
+
+#: languages/vue.php:765
+msgid "Ecommerce"
+msgstr "E-commerce"
+
+#: languages/vue.php:200
+msgid "Custom Dimensions"
+msgstr "Tailles personnalisées"
+
+#. Plugin Name of the plugin
+msgid "Google Analytics Dashboard for WP (GADWP)"
+msgstr "Tableau de bord Google Analytics pour WP (GADWP)"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:310
+msgid "Other"
+msgstr "Autre"
+
+#: languages/vue.php:1156
+msgid "Bounce Rate"
+msgstr "Taux de rebond"
+
+#: languages/vue.php:393
+msgid "Real-Time"
+msgstr "Temps réel"
+
+#: languages/vue.php:1127
+msgid "Sessions"
+msgstr "Sessions"
+
+#: includes/admin/admin.php:34 includes/admin/admin.php:42
+#: includes/admin/admin.php:182
+msgid "Settings"
+msgstr "Réglages"
+
+#. Description of the plugin
+msgid "Displays Google Analytics Reports and Real-Time Statistics in your Dashboard. Automatically inserts the tracking code in every page of your website."
+msgstr "Affiche les Rapports de Google Analytics et les Statistiques en Temps-Réel dans votre Tableau de bord. Insère automatiquement le code de suivi dans chaque page de votre site web. "
+
+#: languages/vue.php:1103
+msgid "Advanced Tracking"
+msgstr "Suivi avancé"
+
+#: languages/vue.php:728
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: languages/vue.php:627
+msgid "Events Tracking"
+msgstr "Évènements de suivi"
+
+#: languages/vue.php:492
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: languages/vue.php:973
+msgid "Automatic Updates"
+msgstr "Mises à jour Automatiques"
+
+#: languages/vue.php:939
+msgid "Permissions"
+msgstr "Droits"
+
+#: languages/vue.php:311
+msgid "Analytics"
+msgstr "Statistiques"

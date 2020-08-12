@@ -1,0 +1,111 @@
+# Translation of Themes - Life Coach in French (France)
+# This file is distributed under the same license as the Themes - Life Coach package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-01-27 14:14:20+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Themes - Life Coach\n"
+
+#. Description of the theme
+msgid "Life Coach is a free WordPress coaching theme designed to create websites for coach, mentors, speakers and therapists. You can easily use this theme to create stunning website without any knowledge of coding. The theme is designed with features that highlights you and yours services that will help to improve your followings. The theme is also multi-purpose. So you can also use it to build small business (restaurants/cafe, travel, education, hotel, construction, events, wedding planners, fitness, affiliate, fashion, lawyer, consulting, sport/medical shops, spa/temas, political), portfolio, church, online agencies and firms, charity, ecommerce (WooCommerce), and freelancers websites. It is responsive, Schema.org compatible, SEO friendly, RTL compatible, speed optimized, and translation ready. Check theme details at https://blossomthemes.com/downloads/life-coach-free-wordpress-theme/, demo at https://demo.blossomthemes.com/life-coach/, read the documentation at https://docs.blossomthemes.com/docs/life-coach/, and get support at https://blossomthemes.com/support-ticket/."
+msgstr "Life Coach est un thème WordPress gratuit de coaching conçu pour créer des sites web pour les entraîneurs, les mentors, les conférenciers et les thérapeutes. Vous pouvez facilement utiliser ce thème pour créer un site web magnifique sans aucune connaissance du code. Le thème est conçu avec des fonctionnalités qui mettent en valeur vous et vos services qui aideront à améliorer vos abonnés. Le thème est également polyvalent. Ainsi, vous pouvez également l'utiliser pour construire de petites entreprises (restaurants /café, voyage, éducation, hôtel, construction, événements, planificateurs de mariage, fitness, affilié, mode, avocat, conseil, sport / boutiques médicales, spa, politique), portefolio, église, agences en ligne et entreprises, charité, ecommerce (WooCommerce), et les sites web d’indépendants. Il est réactif, compatible Schema.org, optimisé pour le SEO et compatible RTL, optimisé pour la vitesse, et prêt pour la traduction. Découvrez les détails du thème sur https://blossomthemes.com/downloads/life-coach-free-wordpress-theme/, démonstration sur https://demo.blossomthemes.com/life-coach/, lisez la documentation sur https://docs.blossomthemes.com/docs/life-coach/ et obtenez du soutien à https://blossomthemes.com/support-ticket/."
+
+#. Theme Name of the theme
+msgid "Life Coach"
+msgstr "Life Coach"
+
+#: functions.php:391
+msgid " Life Coach | Developed By "
+msgstr " Life Coach | Développé par "
+
+#: functions.php:393
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: functions.php:393
+msgid " Powered by %s"
+msgstr "Propulsé par %s"
+
+#: functions.php:231
+msgctxt "Site Title Font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:230
+msgctxt "Secondary Font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Translators: If there are characters in your language that are not supported
+#. by respective fonts, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:229
+msgctxt "Primary Font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:170
+msgid "Secondary font of the site."
+msgstr "Police secondaire du site."
+
+#: functions.php:169
+msgid "Secondary Font"
+msgstr "Police secondaire"
+
+#: functions.php:148
+msgid "Primary font of the site."
+msgstr "Police principale du site."
+
+#: functions.php:147
+msgid "Primary Font"
+msgstr "Police principale"
+
+#: functions.php:127
+msgid "Typography"
+msgstr "Typographie"
+
+#: functions.php:112
+msgid "Change the font size of your site title."
+msgstr "Changez la taille de police du titre de votre site."
+
+#: functions.php:111
+msgid "Site Title Font Size"
+msgstr "Taille de police du titre de site"
+
+#: functions.php:89
+msgid "Site title and tagline font."
+msgstr "Police de titre du site et de slogan."
+
+#: functions.php:88
+msgid "Site Title Font"
+msgstr "Police du titre du site"
+
+#: functions.php:59
+msgid "Documentation Link: %1$sClick here.%2$s"
+msgstr "Lien de documentation : %1$sCliquez ici.%2$s"
+
+#: functions.php:57
+msgid "Demo Link: %1$sClick here.%2$s"
+msgstr "Lien de démo : %1$sCliquez ici.%2$s"
+
+#: functions.php:44
+msgid "Demo & Documentation"
+msgstr "Démo et documentation"
+
+#. Author URI of the theme
+msgid "https://blossomthemes.com/"
+msgstr "https://blossomthemes.com/"
+
+#. Author of the theme
+#: functions.php:392
+msgid "Blossom Themes"
+msgstr "Blossom Themes"
+
+#. Theme URI of the theme
+msgid "https://blossomthemes.com/downloads/life-coach-free-wordpress-theme/"
+msgstr "https://blossomthemes.com/downloads/life-coach-free-wordpress-theme/"
