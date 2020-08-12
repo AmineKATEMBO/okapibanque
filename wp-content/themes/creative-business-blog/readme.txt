@@ -1,9 +1,10 @@
 === Creative business blog ===
 Contributors: postmagthemes
 Tags: two-columns, grid-layout, footer-widgets, entertainment, translation-ready, blog, news, right-sidebar, left-sidebar, custom-header, custom-background, custom-logo, custom-menu, custom-colors, threaded-comments, featured-images, theme-options, full-width-template
-Requires at least: 4.5
-Tested up to: 4.9.8
-Stable tag: 1.0.3
+Requires at least: 4.7
+Tested up to: 5.4.2
+Requires PHP: 5.6
+Stable tag: 1.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +21,12 @@ Description: Creative Business Blog is user creative product for business types 
 - it support theme primary color customize.
 
 == Change log ==
+
+= 1.0.6 - July 14 2020 =
+* Body open tag is added.
+
+= 1.0.5 - march 10 2019 =
+* menu, sidebar and footer back ground color has been made little light again.
 
 = 1.0.4 - jan 10 2018 =
 * menu, sidebar and footer back ground color has been made little light.

@@ -21,6 +21,11 @@
 </head>
 
 <body <?php body_class(); ?> >
+<?php 
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+}
+?>
 <div id="page" class="site container-fluid  ">
 	<header id="masthead" class="site-header ">
 				<?php get_template_part( 'inc/header-layout/header-layout1' ); ?>
