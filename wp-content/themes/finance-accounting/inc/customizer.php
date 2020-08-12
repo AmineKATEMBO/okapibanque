@@ -456,6 +456,165 @@ function finance_accounting_customize_register( $wp_customize ) {
 	    'settings' => 'finance_accounting_second_color',
   	)));
 
+  	// woocommerce Options
+	$wp_customize->add_section( 'finance_accounting_shop_page_options', array(
+    	'title'      => __( 'Shop Page Settings', 'finance-accounting' ),
+		'panel' => 'finance_accounting_panel_id'
+	) );
+
+	$wp_customize->add_setting('finance_accounting_display_related_products',array(
+       'default' => true,
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('finance_accounting_display_related_products',array(
+       'type' => 'checkbox',
+       'label' => __('Related Product','finance-accounting'),
+       'section' => 'finance_accounting_shop_page_options',
+    ));
+
+    $wp_customize->add_setting('finance_accounting_shop_products_border',array(
+       'default' => true,
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('finance_accounting_shop_products_border',array(
+       'type' => 'checkbox',
+       'label' => __('Product Border','finance-accounting'),
+       'section' => 'finance_accounting_shop_page_options',
+    ));
+
+	$wp_customize->add_setting( 'finance_accounting_woocommerce_product_per_columns' , array(
+		'default'           => 3,
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'finance_accounting_sanitize_choices',
+	) );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'finance_accounting_woocommerce_product_per_columns', array(
+		'label'    => __( 'Total Products Per Columns', 'finance-accounting' ),
+		'section'  => 'finance_accounting_shop_page_options',
+		'type'     => 'radio',
+		'choices'  => array(
+						'2' => '2',
+						'3' => '3',
+						'4' => '4',
+						'5' => '5',
+		),
+	) ) );
+
+	$wp_customize->add_setting('finance_accounting_woocommerce_product_per_page',array(
+		'default'	=> 9,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));	
+	$wp_customize->add_control('finance_accounting_woocommerce_product_per_page',array(
+		'label'	=> __('Total Products Per Page','finance-accounting'),
+		'section'	=> 'finance_accounting_shop_page_options',
+		'type'		=> 'number'
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_page_top_padding',array(
+		'default' => 10,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control( 'finance_accounting_shop_page_top_padding',	array(
+		'label' => esc_html__( 'Product Padding (Top Bottom)','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+		'type'		=> 'number'
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_page_left_padding',array(
+		'default' => 10,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control( 'finance_accounting_shop_page_left_padding',	array(
+		'label' => esc_html__( 'Product Padding (Right Left)','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+		'type'		=> 'number'
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_page_border_radius',array(
+		'default' => 0,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_shop_page_border_radius',array(
+		'label' => esc_html__( 'Product Border Radius','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+		'type'		=> 'number'
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_page_box_shadow',array(
+		'default' => 0,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_shop_page_box_shadow',array(
+		'label' => esc_html__( 'Product Shadow','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+		'type'		=> 'number'
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_button_padding_top',array(
+		'default' => 9,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_shop_button_padding_top',	array(
+		'label' => esc_html__( 'Button Padding (Top Bottom)','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+		'type'		=> 'number',
+
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_button_padding_left',array(
+		'default' => 16,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_shop_button_padding_left',array(
+		'label' => esc_html__( 'Button Padding (Right Left)','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'type'		=> 'number',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting( 'finance_accounting_shop_button_border_radius',array(
+		'default' => 0,
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_shop_button_border_radius',array(
+		'label' => esc_html__( 'Button Border Radius','finance-accounting' ),
+		'section' => 'finance_accounting_shop_page_options',
+		'type'		=> 'number',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
 	//Layout Settings
 	$wp_customize->add_section( 'finance_accounting_width_layout', array(
     	'title'      => __( 'Layout Settings', 'finance-accounting' ),
@@ -465,7 +624,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 	//Sticky Header
 	$wp_customize->add_setting( 'finance_accounting_fixed_header',array(
 		'default' => false,
-      	'sanitize_callback'	=> 'sanitize_text_field'
+      	'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ) );
     $wp_customize->add_control('finance_accounting_fixed_header',array(
     	'type' => 'checkbox',
@@ -475,7 +634,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_loader_setting',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_loader_setting',array(
        'type' => 'checkbox',
@@ -543,7 +702,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 	//Show /Hide border
 	$wp_customize->add_setting( 'finance_accounting_button_border',array(
 		'default' => false,
-      	'sanitize_callback'	=> 'sanitize_text_field'
+      	'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ) );
     $wp_customize->add_control('finance_accounting_button_border',array(
     	'type' => 'checkbox',
@@ -553,7 +712,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_top_bottom_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	));
 	$wp_customize->add_control('finance_accounting_top_bottom_padding',array(
 		'label'	=> __('Top and Bottom Padding ','finance-accounting'),
@@ -568,7 +727,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_left_right_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	));
 	$wp_customize->add_control('finance_accounting_left_right_padding',array(
 		'label'	=> __('Left and Right Padding','finance-accounting'),
@@ -583,7 +742,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'finance_accounting_border_radius', array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	) );
 	$wp_customize->add_control( 'finance_accounting_border_radius', array(
 		'label'       => esc_html__( 'Button Border Radius','finance-accounting' ),
@@ -663,7 +822,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_email',array(
 		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_email'
 	));
 	$wp_customize->add_control('finance_accounting_email',array(
 		'label'	=> __('Add Email','finance-accounting'),
@@ -684,7 +843,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_call1',array(
 		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_phone_number'
 	));	
 	$wp_customize->add_control('finance_accounting_call1',array(
 		'label'	=> __('Add Phone Number','finance-accounting'),
@@ -756,7 +915,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_slider_hide',array(
        'default' => false,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_slider_hide',array(
        'type' => 'checkbox',
@@ -766,7 +925,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_slider_title',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_slider_title',array(
        'type' => 'checkbox',
@@ -776,7 +935,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_slider_content',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_slider_content',array(
        'type' => 'checkbox',
@@ -786,7 +945,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_slider_button',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_slider_button',array(
        'type' => 'checkbox',
@@ -811,10 +970,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'finance_accounting_slider_speed',array(
 		'default' => __('3000','finance-accounting'),
-		'transport' => 'refresh',
-		'type' => 'theme_mod',
-		'sanitize_callback'    => 'absint',
-		'sanitize_js_callback' => 'absint',
+		'sanitize_callback'    => 'finance_accounting_sanitize_number_range',
 	));
 	$wp_customize->add_control( 'finance_accounting_slider_speed',array(
 		'label' => esc_html__( 'Slider Speed','finance-accounting' ),
@@ -866,10 +1022,7 @@ function finance_accounting_customize_register( $wp_customize ) {
     //Slider excerpt
 	$wp_customize->add_setting( 'finance_accounting_slider_excerpt_number', array(
 		'default'              => 20,
-		'type'                 => 'theme_mod',
-		'transport' 		   => 'refresh',
-		'sanitize_callback'    => 'absint',
-		'sanitize_js_callback' => 'absint',
+		'sanitize_callback'    => 'finance_accounting_sanitize_number_range',
 	) );
 	$wp_customize->add_control( 'finance_accounting_slider_excerpt_number', array(
 		'label'       => esc_html__( 'Slider Excerpt length','finance-accounting' ),
@@ -995,7 +1148,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_enable_disable_sidebar',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_enable_disable_sidebar',array(
        'type' => 'checkbox',
@@ -1005,7 +1158,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_enable_disable_fixed_header',array(
        'default' => false,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_enable_disable_fixed_header',array(
        'type' => 'checkbox',
@@ -1015,7 +1168,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_enable_disable_slider',array(
        'default' => false,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_enable_disable_slider',array(
        'type' => 'checkbox',
@@ -1025,7 +1178,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_show_hide_slider_button',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_show_hide_slider_button',array(
        'type' => 'checkbox',
@@ -1035,7 +1188,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_enable_disable_scrolltop',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_enable_disable_scrolltop',array(
        'type' => 'checkbox',
@@ -1051,7 +1204,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_date_hide',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_date_hide',array(
        'type' => 'checkbox',
@@ -1061,7 +1214,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_comment_hide',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_comment_hide',array(
        'type' => 'checkbox',
@@ -1071,7 +1224,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('finance_accounting_author_hide',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_author_hide',array(
        'type' => 'checkbox',
@@ -1079,27 +1232,18 @@ function finance_accounting_customize_register( $wp_customize ) {
        'section' => 'finance_accounting_blog_post'
     ));
 
-    $wp_customize->add_setting('finance_accounting_tags_hide',array(
-       'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('finance_accounting_tags_hide',array(
-       'type' => 'checkbox',
-       'label' => __('Single Post Tags','finance-accounting'),
-       'section' => 'finance_accounting_blog_post'
-    ));
+    $wp_customize->add_setting( 'finance_accounting_blog_post_metabox_seperator', array(
+		'default'   => '',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	) );
+	$wp_customize->add_control( 'finance_accounting_blog_post_metabox_seperator', array(
+		'label'       => esc_html__( 'Blog Post Meta Box Seperator','finance-accounting' ),
+		'section'     => 'finance_accounting_blog_post',
+		'description' => __('Add the seperator for meta box. Example: ",",  "|", "/", etc. ','finance-accounting'),
+		'type'        => 'text',
+		'settings'    => 'finance_accounting_blog_post_metabox_seperator',
+	) );
 
-    $wp_customize->add_setting('finance_accounting_single_post_image',array(
-       'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('finance_accounting_single_post_image',array(
-       'type' => 'checkbox',
-       'label' => __('Single Post Featured Image','finance-accounting'),
-       'section' => 'finance_accounting_blog_post'
-    ));
-
-    //Blog layout
     $wp_customize->add_setting('finance_accounting_blog_post_layout',array(
         'default' => __('Default','finance-accounting'),
         'sanitize_callback' => 'finance_accounting_sanitize_choices'
@@ -1132,10 +1276,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'finance_accounting_excerpt_number', array(
 		'default'              => 20,
-		'type'                 => 'theme_mod',
-		'transport' 		   => 'refresh',
-		'sanitize_callback'    => 'absint',
-		'sanitize_js_callback' => 'absint',
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	) );
 	$wp_customize->add_control( 'finance_accounting_excerpt_number', array(
 		'label'       => esc_html__( 'Excerpt length','finance-accounting' ),
@@ -1170,6 +1311,16 @@ function finance_accounting_customize_register( $wp_customize ) {
 		'type'=> 'text'
 	));
 
+	$wp_customize->add_setting('finance_accounting_show_post_pagination',array(
+       'default' => true,
+       'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('finance_accounting_show_post_pagination',array(
+       'type' => 'checkbox',
+       'label' => __('Post Pagination','finance-accounting'),
+       'section' => 'finance_accounting_blog_post'
+    ));
+
 	$wp_customize->add_setting( 'finance_accounting_pagination_option', array(
         'default'			=>  __('Default','finance-accounting'),
         'sanitize_callback'	=> 'finance_accounting_sanitize_choices'
@@ -1183,6 +1334,79 @@ function finance_accounting_customize_register( $wp_customize ) {
             'next-prev' => __( 'Next / Previous', 'finance-accounting' ),
     )));
 
+    $wp_customize->add_setting('finance_accounting_comment_form_heading',array(
+       'default' => __('Leave a Reply','finance-accounting'),
+       'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('finance_accounting_comment_form_heading',array(
+       'type' => 'text',
+       'label' => __('Comment Form Heading','finance-accounting'),
+       'section' => 'finance_accounting_blog_post'
+    ));
+
+    $wp_customize->add_setting('finance_accounting_comment_button_text',array(
+       'default' => __('Post Comment','finance-accounting'),
+       'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('finance_accounting_comment_button_text',array(
+       'type' => 'text',
+       'label' => __('Comment Submit Button Text','finance-accounting'),
+       'section' => 'finance_accounting_blog_post'
+    ));
+
+    $wp_customize->add_setting( 'finance_accounting_comment_form_size',array(
+		'default' => 100,
+		'sanitize_callback'    => 'finance_accounting_sanitize_number_range',
+	));
+	$wp_customize->add_control('finance_accounting_comment_form_size',	array(
+		'label' => esc_html__( 'Comment Form Size','finance-accounting' ),
+		'section' => 'finance_accounting_blog_post',
+		'type' => 'range',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 100,
+			'step' => 1,
+		),
+	));
+
+	// Single post setting
+    $wp_customize->add_section('finance_accounting_single_post_section',array(
+		'title'	=> __('Single Post Settings','finance-accounting'),
+		'panel' => 'finance_accounting_panel_id',
+	));	
+
+	$wp_customize->add_setting('finance_accounting_tags_hide',array(
+       'default' => true,
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('finance_accounting_tags_hide',array(
+       'type' => 'checkbox',
+       'label' => __('Single Post Tags','finance-accounting'),
+       'section' => 'finance_accounting_single_post_section'
+    ));
+
+    $wp_customize->add_setting('finance_accounting_single_post_image',array(
+       'default' => true,
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('finance_accounting_single_post_image',array(
+       'type' => 'checkbox',
+       'label' => __('Single Post Featured Image','finance-accounting'),
+       'section' => 'finance_accounting_single_post_section'
+    ));
+
+    $wp_customize->add_setting( 'finance_accounting_seperator_metabox', array(
+		'default'   => '',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	) );
+	$wp_customize->add_control( 'finance_accounting_seperator_metabox', array(
+		'label'       => esc_html__( 'Single Post Meta Box Seperator','finance-accounting' ),
+		'section'     => 'finance_accounting_single_post_section',
+		'description' => __('Add the seperator for meta box. Example: ",",  "|", "/", etc. ','finance-accounting'),
+		'type'        => 'text',
+		'settings'    => 'finance_accounting_seperator_metabox',
+	) );
+
     // related post setting
     $wp_customize->add_section('finance_accounting_related_post_section',array(
 		'title'	=> __('Related Post Settings','finance-accounting'),
@@ -1191,7 +1415,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_related_posts',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
     ));
     $wp_customize->add_control('finance_accounting_related_posts',array(
        'type' => 'checkbox',
@@ -1200,7 +1424,7 @@ function finance_accounting_customize_register( $wp_customize ) {
     ));
 
 	$wp_customize->add_setting( 'finance_accounting_show_related_post', array(
-        'default' => 'categories',
+        'default' => __('By Categories', 'finance-accounting'),
         'sanitize_callback'	=> 'finance_accounting_sanitize_choices'
     ));
     $wp_customize->add_control( 'finance_accounting_show_related_post', array(
@@ -1208,8 +1432,8 @@ function finance_accounting_customize_register( $wp_customize ) {
         'type' => 'radio',
         'label' => __( 'Show Related Posts', 'finance-accounting' ),
         'choices' => array(
-            'categories'  => __(' By Categories', 'finance-accounting'),
-            'tags' => __( ' By Tags', 'finance-accounting' ),
+            'categories'  => __('By Categories', 'finance-accounting'),
+            'tags' => __( 'By Tags', 'finance-accounting' ),
     )));
 
     $wp_customize->add_setting('finance_accounting_change_related_post_title',array(
@@ -1224,7 +1448,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
    	$wp_customize->add_setting('finance_accounting_change_related_posts_number',array(
 		'default'=> 3,
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	));
 	$wp_customize->add_control('finance_accounting_change_related_posts_number',array(
 		'label'	=> __('Change Related Post Number','finance-accounting'),
@@ -1261,24 +1485,9 @@ function finance_accounting_customize_register( $wp_customize ) {
         ),
     ));
 
-    $wp_customize->add_setting('finance_accounting_copyright_top_bottom_padding',array(
-		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('finance_accounting_copyright_top_bottom_padding',array(
-		'label'	=> __('Copyright Top and Bottom Padding','finance-accounting'),
-		'input_attrs' => array(
-            'step'             => 1,
-			'min'              => 0,
-			'max'              => 50,
-        ),
-		'section'=> 'finance_accounting_footer',
-		'type'=> 'number'
-	));
-
 	$wp_customize->add_setting('finance_accounting_hide_show_scroll',array(
         'default' => true,
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'finance_accounting_sanitize_checkbox'
 	));
 	$wp_customize->add_control('finance_accounting_hide_show_scroll',array(
      	'type' => 'checkbox',
@@ -1304,7 +1513,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_scroll_top_fontsize',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'    => 'finance_accounting_sanitize_number_range',
 	));
 	$wp_customize->add_control('finance_accounting_scroll_top_fontsize',array(
 		'label'	=> __('Scroll To Top Font Size','finance-accounting'),
@@ -1319,7 +1528,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_scroll_top_bottom_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	));
 	$wp_customize->add_control('finance_accounting_scroll_top_bottom_padding',array(
 		'label'	=> __('Scroll Top Bottom Padding ','finance-accounting'),
@@ -1334,7 +1543,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('finance_accounting_scroll_left_right_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	));
 	$wp_customize->add_control('finance_accounting_scroll_left_right_padding',array(
 		'label'	=> __('Scroll Left Right Padding','finance-accounting'),
@@ -1349,7 +1558,7 @@ function finance_accounting_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'finance_accounting_scroll_border_radius', array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
 	) );
 	$wp_customize->add_control( 'finance_accounting_scroll_border_radius', array(
 		'label'       => esc_html__( 'Scroll To Top Border Radius','finance-accounting' ),
@@ -1372,6 +1581,36 @@ function finance_accounting_customize_register( $wp_customize ) {
 		'section'	=> 'finance_accounting_footer',
 		'setting'	=> 'finance_accounting_footer_text',
 		'type'		=> 'text'
+	));
+
+    $wp_customize->add_setting('finance_accounting_copyright_top_bottom_padding',array(
+		'default'=> '',
+		'sanitize_callback'	=> 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_copyright_top_bottom_padding',array(
+		'label'	=> __('Copyright Top and Bottom Padding','finance-accounting'),
+		'input_attrs' => array(
+            'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+        ),
+		'section'=> 'finance_accounting_footer',
+		'type'=> 'number'
+	));
+
+	$wp_customize->add_setting('finance_accounting_footer_text_font_size',array(
+		'default'=> 16,
+		'sanitize_callback'    => 'finance_accounting_sanitize_float',
+	));
+	$wp_customize->add_control('finance_accounting_footer_text_font_size',array(
+		'label'	=> __('Footer Text Font Size','finance-accounting'),
+		'section'=> 'finance_accounting_footer',
+		'input_attrs' => array(
+            'step'             => 1,
+			'min'              => 0,
+			'max'              => 50,
+        ),
+		'type'=> 'number'
 	));
 
 	$wp_customize->get_setting( 'blogname' )->transport          = 'postMessage';

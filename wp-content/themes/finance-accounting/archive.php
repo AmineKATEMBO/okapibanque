@@ -39,9 +39,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 			<?php }else if($finance_accounting_layout_setting == 'Right Sidebar'){ ?>
 				<div class="col-lg-8 col-md-8">
@@ -61,9 +63,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-4 col-md-4">
 					<?php dynamic_sidebar('sidebox-1'); ?>
@@ -86,9 +90,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 			<?php }else if($finance_accounting_layout_setting == 'Three Columns'){ ?>
 				<div id="sidebox" class="col-lg-3 col-md-3">
@@ -111,9 +117,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-3 col-md-3">
 					<?php dynamic_sidebar('sidebox-2'); ?>
@@ -139,9 +147,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-3 col-md-3">
 					<?php dynamic_sidebar('sidebox-2'); ?>
@@ -168,9 +178,11 @@ get_header(); ?>
 
 							endif;
 						?>
-						<div class="navigation">
-			                <?php finance_accounting_pagination_type(); ?>
-		       	 		</div>
+						<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+							<div class="navigation">
+				                <?php finance_accounting_pagination_type(); ?>
+			       	 		</div>
+			       	 	<?php } ?>
 		       	 	</div>
 				</div>
 				<div id="sidebox" class="col-lg-3 col-md-3">
@@ -194,16 +206,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php
-		                    
-		                    the_posts_pagination( array(
-		                        'prev_text'          => __( 'Previous page', 'finance-accounting' ),
-		                        'next_text'          => __( 'Next page', 'finance-accounting' ),
-		                        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'finance-accounting' ) . ' </span>',
-		                    ) );
-		                ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-4 col-md-4">
 					<?php dynamic_sidebar('sidebox-1'); ?>

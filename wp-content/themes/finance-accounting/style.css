@@ -4,9 +4,9 @@ Theme URI: https://www.themeseye.com/wordpress/free-finance-wordpress-theme/
 Author: ThemesEye
 Author URI: https://www.themeseye.com/
 Description: Finance Accounting is a professional looking WordPress theme for finance and accounting businesses. It is dedicatedly designed for financial advisors, law firms, accountants, consults, wealth advisors and investors. The theme can be used by general corporate websites, start-ups and business ventures. Its professional look makes it apt for serious businesses and corporate websites. It has stunning and modern design. The user-friendly interface caters hassle-free navigation. It provides easy customization. The theme has all the essential plugins just enough to set up a finance site. It supports third party plugins to extend the functionality and include a specific function. It has multiple page layouts for different pages. You can include banner to give it an altogether different look. The Finance and Accounting theme is responsive to adjust its layout across any device size; cross-browser compatible to load on all browsers and translation ready to serve a particular region or population. It has search engine optimized code which pushes for faster page loading. The theme is made in bootstrap framework. Short codes allow clean and secure theme designing. It has a testimonial section for your users to share their experience about your site and services. This will give more insight to other users. Demo: https://themeseye.com/demo/finance-accounting/
-Tested up to: 5.4.1
+Tested up to: 5.4.2
 Requires PHP: 7.2.14
-Version: 0.6
+Version: 0.6.3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: finance-accounting
@@ -1358,7 +1358,17 @@ h2.woocommerce-loop-product__title,
 	width: 29% !important;
     display: inline-table;
 }
-
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span{
+	padding: 15px;
+	font-size: 15px;
+	font-weight: 600;
+}
+.woocommerce #customer_login .col-1, .woocommerce #customer_login .col-2 {
+	max-width: 100%;
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current{
+	color: #8a7e88 !important;
+}
 /*----------Woocommerce widget css -------*/
 .woocommerce .widget_shopping_cart .cart_list li a.remove, .woocommerce.widget_shopping_cart .cart_list li a.remove{
 	top: 3px;
@@ -1826,7 +1836,6 @@ body.page:not(.finance-accounting-front-page) .entry-title {
 }
 
 .page-numbers {
-	display: none;
 	padding: 0.5em 0.75em;
 }
 

@@ -10,9 +10,9 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-12">
 				<div class="logo">
-			      <?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-					<?php else: ?>
+		      		<?php if ( has_custom_logo() ) : ?>
+						<div class="site-logo"><?php the_custom_logo(); ?></div>
+		            <?php endif; ?>   
 					<?php $blog_info = get_bloginfo( 'name' ); ?>
 					<?php if ( ! empty( $blog_info ) ) : ?>
 		              	<?php if( get_theme_mod('finance_accounting_show_site_title',true) != ''){ ?>
@@ -32,8 +32,7 @@
 			                <?php echo esc_html($description); ?>
 			              </p>
 			          	<?php }?>
-		            <?php endif; ?>
-		            <?php endif; ?>      
+		            <?php endif; ?>   
 			    </div>
 			</div>
 			<div class="col-lg-8 col-md-12">

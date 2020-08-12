@@ -2,9 +2,8 @@
 Contributors: ThemesEye
 Tags: left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-columns, grid-layout, custom-colors, custom-background, custom-logo, custom-menu, custom-header, editor-style, featured-images, footer-widgets, sticky-post, post-formats, full-width-template, rtl-language-support, theme-options, threaded-comments, translation-ready, blog, news
 Requires at least: 5.0
-Tested up to: 5.4.1
+Tested up to: 5.4.2
 Requires PHP: 7.2.14
-Stable tag: 0.6
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -25,7 +24,7 @@ Finance Accounting is a professional looking WordPress theme for finance and acc
   * Added proper theme urls.
 
 = 0.3 =
-  * Changed the pexel image url to pixabay image url.
+  * Changed image url.
 
 = 0.4 =
   * Changed http to https in footer.
@@ -132,6 +131,30 @@ Finance Accounting is a professional looking WordPress theme for finance and acc
 = 0.6 =
   * Resolved code errors.
 
+= 0.6.1 =
+  * Added option for comment form heading.
+  * Added option for comment submit button text.
+  * Added width option for comment form.
+  * Added Meta Box Seperator for single post.
+  * Added show / hide post pagination.
+
+= 0.6.2 =
+  * Added Meta Box Seperator for Blog post.
+  * Added copyright text font size option.
+  * Changed font awesome license from readme.txt.
+  * Removed L7 from readme.txt.
+  * Changed sanitize callback function.
+  * Added enable / disable option for related products.
+  * Added enable / disable option for product border.
+
+= 0.6.3 =
+  * Added top, bottom, left and right padding options for shop page products.
+  * Added border radius option for shop page products.
+  * Added box shadow option for shop page products.
+  * Added top, bottom, left and right padding options for shop page product buttons.
+  * Added border radius option for shop page product buttons.
+  * Updated POT file.
+
 == Resources ==
 
 Finance Accounting WordPress Theme, Copyright 2018 Themeseye
@@ -150,7 +173,7 @@ Finance Accounting bundles the following third-party resources:
     - Davegandy
     - copyright July 12, 2018, Davegandy
     - https://github.com/FortAwesome/Font-Awesome.git
-    - License: Font Awesome Free License v5.0.0
+    - License: Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License
     - https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt
 
 ** Customizer Pro 

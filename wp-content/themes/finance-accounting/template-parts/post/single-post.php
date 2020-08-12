@@ -26,17 +26,17 @@
 		<?php if( get_theme_mod( 'finance_accounting_date_hide',true) != '' || get_theme_mod( 'finance_accounting_comment_hide',true) != '' || get_theme_mod( 'finance_accounting_author_hide',true) != '') { ?>
 			<div class="post-info">
 		      	<?php if( get_theme_mod( 'finance_accounting_date_hide',true) != '') { ?>
-					<i class="fa fa-calendar"></i><span class="entry-date"><a href="<?php echo esc_url( get_day_link( $archive_year, $archive_month, $archive_day)); ?>"><?php echo esc_html( get_the_date() ); ?><span class="screen-reader-text"><?php echo esc_html( get_the_date() ); ?></span></a></span>
+					<i class="fa fa-calendar"></i><span class="entry-date"><a href="<?php echo esc_url( get_day_link( $archive_year, $archive_month, $archive_day)); ?>"><?php echo esc_html( get_the_date() ); ?><span class="screen-reader-text"><?php echo esc_html( get_the_date() ); ?></span></a></span><?php echo esc_html( get_theme_mod('finance_accounting_seperator_metabox') ); ?>
 				<?php } ?>
 				<?php if( get_theme_mod( 'finance_accounting_author_hide',true) != '') { ?>
-					<i class="fa fa-user"></i><span class="entry-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' )) ); ?>"><?php esc_html(the_author()); ?><span class="screen-reader-text"><?php esc_html(the_author()); ?></span></a></span>
+					<i class="fa fa-user"></i><span class="entry-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' )) ); ?>"><?php the_author(); ?><span class="screen-reader-text"><?php the_author(); ?></span></a></span><?php echo esc_html( get_theme_mod('finance_accounting_seperator_metabox') ); ?>
 				<?php } ?>
 				<?php if( get_theme_mod( 'finance_accounting_comment_hide',true) != '') { ?>
 					<i class="fas fa-comments"></i><span class="entry-comments"><?php comments_number( __('0 Comments','finance-accounting'), __('0 Comments','finance-accounting'), __('% Comments','finance-accounting') ); ?></span>
 				<?php } ?>
 		    </div>
 	    <?php } ?>
-		<h1><?php esc_html(the_title()); ?></h1>
+		<h1><?php the_title(); ?></h1>
 		<div class="text"><?php the_content();?></div>
 		<?php if( get_theme_mod( 'finance_accounting_tags_hide',true) != '') { ?>
 		  	<div class="tags"><p><?php

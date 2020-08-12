@@ -19,7 +19,8 @@ input#_customize-input-finance_accounting_excerpt_number,
 input#_customize-input-finance_accounting_slider_excerpt_number,
 input#_customize-input-finance_accounting_slider_opacity_color,
 input#_customize-input-finance_accounting_slider_speed,
-input#_customize-input-finance_accounting_scroll_top_fontsize {
+input#_customize-input-finance_accounting_scroll_top_fontsize,
+input#_customize-input-finance_accounting_comment_form_size {
     width: 100%;
 }
 input#_customize-input-logo_size{

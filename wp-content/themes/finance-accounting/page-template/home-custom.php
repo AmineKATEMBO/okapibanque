@@ -36,7 +36,7 @@ get_header(); ?>
                 <?php if( get_theme_mod( 'finance_accounting_slider_title',true) != '' || get_theme_mod('finance_accounting_slider_content',true) != '' || get_theme_mod('finance_accounting_slider_button',true) != '') { ?>
                   <div class="inner_carousel">
                     <?php if( get_theme_mod('finance_accounting_slider_title',true) != ''){ ?>
-                      <h1><a href="<?php echo esc_url( get_permalink() );?>"><?php esc_html(the_title()); ?><span class="screen-reader-text"><?php esc_html(the_title()); ?></span></a></h1>
+                      <h1><a href="<?php echo esc_url( get_permalink() );?>"><?php the_title(); ?><span class="screen-reader-text"><?php the_title(); ?></span></a></h1>
                       <hr class="slide">
                     <?php } ?> 
                     <?php if( get_theme_mod('finance_accounting_slider_content',true) != ''){ ?>
@@ -90,7 +90,7 @@ get_header(); ?>
                 <div class="trainerbox">
                   <div class="abt-img-box"><?php if(has_post_thumbnail()) { ?><?php the_post_thumbnail(); ?><?php } ?></div>
                 </div>
-                <h3><a href="<?php esc_url(the_permalink()); ?>"><?php esc_html(the_title()); ?><span class="screen-reader-text"><?php esc_html(the_title()); ?></span></a></h3>
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?><span class="screen-reader-text"><?php the_title(); ?></span></a></h3>
                 <p><?php the_excerpt(); ?></p>
               </div>
             <?php endwhile;

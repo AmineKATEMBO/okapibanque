@@ -31,9 +31,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-		   	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 			</div>
 		<?php }else if($finance_accounting_layout_setting == 'Right Sidebar'){ ?>
@@ -55,9 +57,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-4 col-md-4">
 					<?php dynamic_sidebar('sidebox-1'); ?>
@@ -81,9 +85,11 @@ get_header(); ?>
 
 					endif;
 				?>
-				<div class="navigation">
-	                <?php finance_accounting_pagination_type(); ?>
-       	 		</div>
+				<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+					<div class="navigation">
+		                <?php finance_accounting_pagination_type(); ?>
+	       	 		</div>
+	       	 	<?php } ?>
 			</div>
 		<?php }else if($finance_accounting_layout_setting == 'Three Columns'){ ?>
 			<div class="row">
@@ -107,9 +113,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-3 col-md-3">
 					<?php dynamic_sidebar('sidebox-2'); ?>
@@ -137,9 +145,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-3 col-md-3">
 					<?php dynamic_sidebar('sidebox-2'); ?>
@@ -168,9 +178,11 @@ get_header(); ?>
 
 							endif;
 						?>
-						<div class="navigation">
-			                <?php finance_accounting_pagination_type(); ?>
-	       	 			</div>
+						<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+							<div class="navigation">
+				                <?php finance_accounting_pagination_type(); ?>
+			       	 		</div>
+			       	 	<?php } ?>
 	       	 		</div>
 				</div>
 				<div id="sidebox" class="col-lg-3 col-md-3">
@@ -196,9 +208,11 @@ get_header(); ?>
 
 						endif;
 					?>
-					<div class="navigation">
-		                <?php finance_accounting_pagination_type(); ?>
-	       	 		</div>
+					<?php if( get_theme_mod( 'finance_accounting_show_post_pagination',true) != '') { ?>
+						<div class="navigation">
+			                <?php finance_accounting_pagination_type(); ?>
+		       	 		</div>
+		       	 	<?php } ?>
 				</div>
 				<div id="sidebox" class="col-lg-4 col-md-4">
 					<?php dynamic_sidebar('sidebox-1'); ?>

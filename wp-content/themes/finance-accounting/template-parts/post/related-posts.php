@@ -61,9 +61,9 @@ $related_posts = finance_accounting_related_posts_function(); ?>
 				<div class="col-lg-4 col-md-4">
 					<article class="page-box">
 						<div class="category">
-						  	<a href="<?php echo esc_url( get_permalink() ); ?>"><?php foreach((get_the_category()) as $category) { echo esc_html($category->cat_name) . ' '; } ?><span class="screen-reader-text"><?php esc_attr_e( 'Category','finance-accounting' );?></span></a>
+						  	<a href="<?php echo esc_url( get_permalink() ); ?>"><?php foreach((get_the_category()) as $category) { echo esc_html($category->cat_name) . ' '; } ?><span class="screen-reader-text"><?php esc_html_e( 'Category','finance-accounting' );?></span></a>
 						</div>
-						<h3><a href="<?php echo esc_url( get_permalink() );  ?>" title="<?php echo the_title_attribute(); ?>"><?php esc_html(the_title());?><span class="screen-reader-text"><?php esc_html(the_title()); ?></span></a></h3>
+						<h3><a href="<?php echo esc_url( get_permalink() );  ?>" title="<?php echo the_title_attribute(); ?>"><?php the_title();?><span class="screen-reader-text"><?php the_title(); ?></span></a></h3>
 						<div class="post-image">
 						    <?php 
 						      if(has_post_thumbnail()) { 

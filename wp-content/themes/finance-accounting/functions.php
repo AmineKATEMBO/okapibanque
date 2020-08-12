@@ -355,12 +355,46 @@ function finance_accounting_sanitize_choices( $input, $setting ) {
     }
 }
 
+function finance_accounting_sanitize_phone_number( $phone ) {
+	return preg_replace( '/[^\d+]/', '', $phone );
+}
+
+function finance_accounting_sanitize_email( $email, $setting ) {
+	$email = sanitize_email( $email );
+	return ( ! is_null( $email ) ? $email : $setting->default );
+}
+
+function finance_accounting_sanitize_checkbox( $input ) {
+	return ( ( isset( $input ) && true == $input ) ? true : false );
+}
+
+function finance_accounting_sanitize_float( $input ) {
+	return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+}
+
+function finance_accounting_sanitize_number_range( $number, $setting ) {
+	$number = absint( $number );
+	$atts = $setting->manager->get_control( $setting->id )->input_attrs;
+	$min = ( isset( $atts['min'] ) ? $atts['min'] : $number );
+	$max = ( isset( $atts['max'] ) ? $atts['max'] : $number );
+	$step = ( isset( $atts['step'] ) ? $atts['step'] : 1 );
+	return ( $min <= $number && $number <= $max && is_int( $number / $step ) ? $number : $setting->default );
+}
+
 // Change number or products per row to 3
 add_filter('loop_shop_columns', 'finance_accounting_loop_columns');
-	if (!function_exists('finance_accounting_loop_columns')) {
+if (!function_exists('finance_accounting_loop_columns')) {
 	function finance_accounting_loop_columns() {
-		return 3; // 3 products per row
+		$columns = get_theme_mod( 'finance_accounting_woocommerce_product_per_columns', 3 );
+		return $columns; // 3 products per row
 	}
+}
+
+//Change number of products that are displayed per page (shop page)
+add_filter( 'loop_shop_per_page', 'finance_accounting_shop_per_page', 20 );
+function finance_accounting_shop_per_page( $cols ) {
+  	$cols = get_theme_mod( 'finance_accounting_woocommerce_product_per_page', 9 );
+	return $cols;
 }
 
 /* Excerpt Limit Begin */

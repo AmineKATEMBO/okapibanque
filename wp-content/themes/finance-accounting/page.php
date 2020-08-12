@@ -13,7 +13,7 @@ get_header(); ?>
 				<div class="feature-box">   
 	                <?php the_post_thumbnail(); ?>
 	            </div>
-				<h1><?php esc_html(the_title()); ?></h1>
+				<h1><?php the_title(); ?></h1>
 				<div class="text"><p><?php the_content(); ?></p></div>
 				
 				<?php
