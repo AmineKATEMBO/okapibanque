@@ -10,7 +10,7 @@ get_header(); ?>
 
   <?php if( get_theme_mod( 'the_wp_business_slider_hide') != '') { ?>
     <section id="slider">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> 
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="<?php echo esc_attr(get_theme_mod('the_wp_business_slider_speed',3000)); ?>"> 
         <?php $the_wp_business_content_pages = array();
           for ( $count = 1; $count <= 4; $count++ ) {
             $mod = intval( get_theme_mod( 'the_wp_business_slidersettings_page' . $count ));

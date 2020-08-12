@@ -75,6 +75,8 @@ if ( post_password_required() )
 		comment_form( array(
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
+			'title_reply' => esc_html(get_theme_mod('the_wp_business_comment_title',__('Leave a Reply','the-wp-business' )) ),
+			'label_submit' => esc_html(get_theme_mod('the_wp_business_comment_submit_text',__('Post Comment','the-wp-business' )) ),
 		) );
 	?>
 </div>

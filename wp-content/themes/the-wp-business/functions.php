@@ -462,6 +462,27 @@ if ( ! function_exists( 'the_wp_business_related_posts_function' ) ) {
 	}
 }
 
+function the_wp_business_sanitize_email( $email, $setting ) {
+	// Strips out all characters that are not allowable in an email address.
+	$email = sanitize_email( $email );
+
+	// If $email is a valid email, return it; otherwise, return the default.
+	return ( ! is_null( $email ) ? $email : $setting->default );
+}
+
+function the_wp_business_sanitize_phone_number( $phone ) {
+	return preg_replace( '/[^\d+]/', '', $phone );
+}
+
+function the_wp_business_sanitize_checkbox( $input ) {
+	// Boolean check 
+	return ( ( isset( $input ) && true == $input ) ? true : false );
+}
+
+function the_wp_business_sanitize_float( $input ) {
+    return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+}
+
 /* About Theme. */
 require get_template_directory() . '/inc/getting-started/getting-started.php';
 /* Custom template tags for this theme. */

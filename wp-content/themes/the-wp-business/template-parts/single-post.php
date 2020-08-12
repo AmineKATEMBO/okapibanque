@@ -28,13 +28,15 @@
 		    <?php }?>
 		</div>
 	<?php }?>
-	<?php if(has_post_thumbnail()) { ?>
-		<hr>
-		<div class="feature-box">	
-			<?php the_post_thumbnail(); ?>
-		</div>
-		<hr>					
-	<?php } ?>
+	<?php if( get_theme_mod( 'the_wp_business_single_post_image',true) != '') { ?>
+		<?php if(has_post_thumbnail()) { ?>
+			<hr>
+			<div class="feature-box">	
+				<?php the_post_thumbnail(); ?>
+			</div>
+			<hr>					
+		<?php } ?>
+	<?php }?>
 	<div class="entry-content"><?php the_content(); ?></div>
 
 	<?php
@@ -53,15 +55,17 @@
 			'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'the-wp-business' ),
 		) );
 	} 	elseif ( is_singular( 'post' ) ) {
-		// Previous/next post navigation.
-		the_post_navigation( array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next<i class="fas fa-angle-double-right"></i>', 'the-wp-business' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Next post:', 'the-wp-business' ) . '</span> ' .
-				'',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( '<i class="fas fa-angle-double-left"></i>Previous', 'the-wp-business' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Previous post:', 'the-wp-business' ) . '</span> ' .
-				'',
-		) );
+		if( get_theme_mod( 'the_wp_business_single_post_nav',true) != '') {
+			// Previous/next post navigation.
+			the_post_navigation( array(
+				'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html(get_theme_mod('the_wp_business_single_post_next_nav_text',__('Next','the-wp-business' )) )  . '</span> ' .
+					'<span class="screen-reader-text">' . __( 'Next post:', 'the-wp-business' ) . '</span> ' .
+					'',
+				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html(get_theme_mod('the_wp_business_single_post_prev_nav_text',__('Previous','the-wp-business' )) ) . '</span> ' .
+					'<span class="screen-reader-text">' . __( 'Previous post:', 'the-wp-business' ) . '</span> ' .
+					'',
+			) );
+		}
 	}
 
 	echo '<div class="clearfix"></div>'; ?>
@@ -79,9 +83,11 @@
 	<?php }?>
 
 	<?php
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
+	if( get_theme_mod( 'the_wp_business_single_post_comment',true) != '') {
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
 	}?>
 </article>
 

@@ -26,7 +26,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 	            <?php if ( ! empty( $this->label )) : ?>
 	                <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
 	            <?php endif; ?>
-	            <div class="cs-range-value"><?php echo esc_attr($this->value()); ?></div>
+	            <div class="cs-range-value"><?php echo esc_html($this->value()); ?></div>
 	            <input data-input-type="range" type="range" <?php $this->input_attrs(); ?> value="<?php echo esc_attr($this->value()); ?>" <?php $this->link(); ?> />
 	            <?php if ( ! empty( $this->description )) : ?>
 	                <span class="description customize-control-description"><?php echo esc_html($this->description); ?></span>
@@ -481,7 +481,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_top_header',array(
        'default' => true,
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_top_header',array(
        'type' => 'checkbox',
@@ -489,9 +489,47 @@ function the_wp_business_customize_register( $wp_customize ) {
        'section' => 'the_wp_business_topbar_icon'
     ));
 
+    $wp_customize->add_setting('the_wp_business_topbar_padding',array(
+		'sanitize_callback'	=> 'esc_html'
+	));
+	$wp_customize->add_control('the_wp_business_topbar_padding',array(
+		'label'	=> esc_html__('Topbar Padding','the-wp-business'),
+		'section'=> 'the_wp_business_topbar_icon',
+	));
+
+    $wp_customize->add_setting('the_wp_business_top_topbar_padding',array(
+		'default'=> '',
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_top_topbar_padding',array(
+		'description'	=> __('Top','the-wp-business'),
+		'input_attrs' => array(
+            'step' => 1,
+			'min' => 0,
+			'max' => 50,
+        ),
+		'section'=> 'the_wp_business_topbar_icon',
+		'type'=> 'number',
+	));
+
+	$wp_customize->add_setting('the_wp_business_bottom_topbar_padding',array(
+		'default'=> '',
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_bottom_topbar_padding',array(
+		'description'	=> __('Bottom','the-wp-business'),
+		'input_attrs' => array(
+            'step' => 1,
+			'min' => 0,
+			'max' => 50,
+        ),
+		'section'=> 'the_wp_business_topbar_icon',
+		'type'=> 'number',
+	));
+
     $wp_customize->add_setting('the_wp_business_sticky_header',array(
        'default' => '',
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_sticky_header',array(
        'type' => 'checkbox',
@@ -499,9 +537,19 @@ function the_wp_business_customize_register( $wp_customize ) {
        'section' => 'the_wp_business_topbar_icon'
     ));
 
+	$wp_customize->add_setting('the_wp_business_show_search',array(
+       'default' => 'true',
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('the_wp_business_show_search',array(
+       'type' => 'checkbox',
+       'label' => __('Show/Hide Search','the-wp-business'),
+       'section' => 'the_wp_business_topbar_icon'
+    ));
+
 	$wp_customize->add_setting('the_wp_business_contact_corporate',array(
 		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_phone_number'
 	));	
 	$wp_customize->add_control('the_wp_business_contact_corporate',array(
 		'label'	=> __('Add Phone Number','the-wp-business'),
@@ -512,7 +560,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_email_corporate',array(
 		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_email'
 	));	
 	$wp_customize->add_control('the_wp_business_email_corporate',array(
 		'label'	=> __('Add Email','the-wp-business'),
@@ -604,7 +652,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_slider_hide',array(
        'default' => 'false',
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_slider_hide',array(
        'type' => 'checkbox',
@@ -614,7 +662,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('the_wp_business_slider_indicator',array(
         'default' => true,
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
 	));
 	$wp_customize->add_control('the_wp_business_slider_indicator',array(
      	'type' => 'checkbox',
@@ -624,7 +672,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_slider_title',array(
         'default' => true,
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
 	));
 	$wp_customize->add_control('the_wp_business_slider_title',array(
      	'type' => 'checkbox',
@@ -634,7 +682,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_slider_content',array(
         'default' => true,
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
 	));
 	$wp_customize->add_control('the_wp_business_slider_content',array(
      	'type' => 'checkbox',
@@ -644,7 +692,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_slider_button',array(
         'default' => true,
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
 	));
 	$wp_customize->add_control('the_wp_business_slider_button',array(
      	'type' => 'checkbox',
@@ -653,19 +701,32 @@ function the_wp_business_customize_register( $wp_customize ) {
 	));
 
 	for ( $count = 1; $count <= 4; $count++ ) {
-
-		// Add color scheme setting and control.
 		$wp_customize->add_setting( 'the_wp_business_slidersettings_page' . $count, array(
 			'default'           => '',
 			'sanitize_callback' => 'the_wp_business_sanitize_dropdown_pages'
 		) );
-
 		$wp_customize->add_control( 'the_wp_business_slidersettings_page' . $count, array(
 			'label'    => __( 'Select Slide Image Page', 'the-wp-business' ),
 			'section'  => 'the_wp_business_slidersettings',
 			'type'     => 'dropdown-pages'
 		) );
 	}
+
+	$wp_customize->add_setting( 'the_wp_business_slider_speed', array(
+		'default'              => 3000,
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
+	) );
+	$wp_customize->add_control( 'the_wp_business_slider_speed', array(
+		'label'       => esc_html__( 'Slider Speed','the-wp-business' ),
+		'section'     => 'the_wp_business_slidersettings',
+		'type'        => 'number',
+		'settings'    => 'the_wp_business_slider_speed',
+		'input_attrs' => array(
+			'step'             => 500,
+			'min'              => 500,
+			'max'              => 5000,
+		),
+	) );
 
 	//content Alignment
     $wp_customize->add_setting('the_wp_business_slider_alignment_option',array(
@@ -686,10 +747,7 @@ function the_wp_business_customize_register( $wp_customize ) {
     //Slider excerpt
 	$wp_customize->add_setting( 'the_wp_business_slider_excerpt_number', array(
 		'default'              => 15,
-		'type'                 => 'theme_mod',
-		'transport' 		   => 'refresh',
-		'sanitize_callback'    => 'absint',
-		'sanitize_js_callback' => 'absint',
+		'sanitize_callback'    => 'the_wp_business_sanitize_float',
 	) );
 	$wp_customize->add_control( 'the_wp_business_slider_excerpt_number', array(
 		'label'       => esc_html__( 'Slider Excerpt length','the-wp-business' ),
@@ -702,6 +760,25 @@ function the_wp_business_customize_register( $wp_customize ) {
 			'max'              => 50,
 		),
 	) );
+
+	$wp_customize->add_setting('the_wp_business_slider_image_overlay',array(
+        'default' => true,
+        'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
+	));
+	$wp_customize->add_control('the_wp_business_slider_image_overlay',array(
+     	'type' => 'checkbox',
+      	'label' => __('Show / Hide Slider Image Overlay','the-wp-business'),
+      	'section' => 'the_wp_business_slidersettings',
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_slider_overlay_color', array(
+	    'default' => '#000',
+	    'sanitize_callback' => 'sanitize_hex_color'
+  	));
+  	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'the_wp_business_slider_overlay_color', array(
+	    'label' => __('Slider Overlay Color', 'the-wp-business'),
+	    'section' => 'the_wp_business_slidersettings',
+  	)));
 
 	//Opacity
 	$wp_customize->add_setting('the_wp_business_slider_opacity_color',array(
@@ -790,7 +867,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('the_wp_business_metafields_date',array(
        'default' => 'true',
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_metafields_date',array(
        'type' => 'checkbox',
@@ -800,7 +877,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('the_wp_business_metafields_author',array(
        'default' => 'true',
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_metafields_author',array(
        'type' => 'checkbox',
@@ -810,7 +887,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('the_wp_business_metafields_comment',array(
        'default' => 'true',
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_metafields_comment',array(
        'type' => 'checkbox',
@@ -835,7 +912,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
    $wp_customize->add_setting( 'the_wp_business_post_excerpt_number', array(
 		'default'              => 20,
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	) );
 	$wp_customize->add_control( 'the_wp_business_post_excerpt_number', array(
 		'label'       => esc_html__( 'Blog Post Excerpt Number (Max 50)','the-wp-business' ),
@@ -869,11 +946,97 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_metafields_tags',array(
        'default' => 'true',
-       'sanitize_callback'	=> 'sanitize_text_field'
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
     ));
     $wp_customize->add_control('the_wp_business_metafields_tags',array(
        'type' => 'checkbox',
        'label' => __('Show / Hide Single Post Tags','the-wp-business'),
+       'section' => 'the_wp_business_single_post_settings'
+    ));
+
+    $wp_customize->add_setting('the_wp_business_single_post_image',array(
+       'default' => 'true',
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('the_wp_business_single_post_image',array(
+       'type' => 'checkbox',
+       'label' => __('Show / Hide Single Post Featured Image','the-wp-business'),
+       'section' => 'the_wp_business_single_post_settings'
+    ));
+
+    $wp_customize->add_setting('the_wp_business_single_post_nav',array(
+       'default' => 'true',
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('the_wp_business_single_post_nav',array(
+       'type' => 'checkbox',
+       'label' => __('Show / Hide Single Post Navigation','the-wp-business'),
+       'section' => 'the_wp_business_single_post_settings'
+    ));
+
+    $wp_customize->add_setting( 'the_wp_business_single_post_prev_nav_text', array(
+		'default' => __('Previous','the-wp-business' ),
+		'sanitize_callback'	=> 'sanitize_text_field'
+	) );
+	$wp_customize->add_control( 'the_wp_business_single_post_prev_nav_text', array(
+		'label' => esc_html__( 'Single Post Previous Nav text','the-wp-business' ),
+		'section'     => 'the_wp_business_single_post_settings',
+		'type'        => 'text',
+		'settings'    => 'the_wp_business_single_post_prev_nav_text'
+	) );
+
+	$wp_customize->add_setting( 'the_wp_business_single_post_next_nav_text', array(
+		'default' => __('Next','the-wp-business' ),
+		'sanitize_callback'	=> 'sanitize_text_field'
+	) );
+	$wp_customize->add_control( 'the_wp_business_single_post_next_nav_text', array(
+		'label' => esc_html__( 'Single Post Next Nav text','the-wp-business' ),
+		'section'     => 'the_wp_business_single_post_settings',
+		'type'        => 'text',
+		'settings'    => 'the_wp_business_single_post_next_nav_text'
+	) );
+
+    $wp_customize->add_setting('the_wp_business_single_post_comment',array(
+       'default' => 'true',
+       'sanitize_callback'	=> 'the_wp_business_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('the_wp_business_single_post_comment',array(
+       'type' => 'checkbox',
+       'label' => __('Show / Hide Single Post comment','the-wp-business'),
+       'section' => 'the_wp_business_single_post_settings'
+    ));
+
+	$wp_customize->add_setting( 'the_wp_business_comment_width', array(
+		'default'=> '100',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	) );
+	$wp_customize->add_control( new The_WP_Business_WP_Customize_Range_Control( $wp_customize, 'the_wp_business_comment_width', array(
+        'label'  => __('Comment textarea width','the-wp-business'),
+        'section'  => 'the_wp_business_single_post_settings',
+        'description' => __('Measurement is in %.','the-wp-business'),
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 100,
+        ),
+    )));
+
+    $wp_customize->add_setting('the_wp_business_comment_title',array(
+       'default' => __('Leave a Reply','the-wp-business'),
+       'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('the_wp_business_comment_title',array(
+       'type' => 'text',
+       'label' => __('Comment form Title','the-wp-business'),
+       'section' => 'the_wp_business_single_post_settings'
+    ));
+
+    $wp_customize->add_setting('the_wp_business_comment_submit_text',array(
+       'default' => __('Post Comment','the-wp-business'),
+       'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('the_wp_business_comment_submit_text',array(
+       'type' => 'text',
+       'label' => __('Comment Submit Button Label','the-wp-business'),
        'section' => 'the_wp_business_single_post_settings'
     ));
 
@@ -899,7 +1062,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'the_wp_business_related_post_count', array(
 		'default' => 3,
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	) );
 	$wp_customize->add_control( 'the_wp_business_related_post_count', array(
 		'label' => esc_html__( 'Related Posts Count','the-wp-business' ),
@@ -954,7 +1117,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_top_button_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_top_button_padding',array(
 		'label'	=> __('Top','the-wp-business'),
@@ -970,7 +1133,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_bottom_button_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_bottom_button_padding',array(
 		'label'	=> __('Bottom','the-wp-business'),
@@ -986,7 +1149,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_left_button_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_left_button_padding',array(
 		'label'	=> __('Left','the-wp-business'),
@@ -1002,7 +1165,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_right_button_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_right_button_padding',array(
 		'label'	=> __('Right','the-wp-business'),
@@ -1068,6 +1231,20 @@ function the_wp_business_customize_register( $wp_customize ) {
 	    'settings' => 'the_wp_business_preloader_bg_color',
   	)));
 
+  	$wp_customize->add_setting('the_wp_business_preloader_type',array(
+        'default' => __('Square','the-wp-business'),
+        'sanitize_callback' => 'the_wp_business_sanitize_choices'
+	));
+	$wp_customize->add_control('the_wp_business_preloader_type',array(
+        'type' => 'radio',
+        'label' => __('Preloader Type','the-wp-business'),
+        'section' => 'the_wp_business_advance_options',
+        'choices' => array(
+            'Square' => __('Square','the-wp-business'),
+            'Circle' => __('Circle','the-wp-business'),
+        ),
+	) );
+
 	$wp_customize->add_setting('the_wp_business_theme_layout_options',array(
         'default' => __('Default Theme','the-wp-business'),
         'sanitize_callback' => 'the_wp_business_sanitize_choices'
@@ -1085,7 +1262,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	//404 Page Option
 	$wp_customize->add_section('the_wp_business_404_settings',array(
-		'title'	=> __('404 Settings','the-wp-business'),
+		'title'	=> __('404 Page & Search Result Settings','the-wp-business'),
 		'priority'	=> null,
 		'panel' => 'the_wp_business_panel_id',
 	));
@@ -1106,6 +1283,26 @@ function the_wp_business_customize_register( $wp_customize ) {
 	));	
 	$wp_customize->add_control('the_wp_business_404_button_label',array(
 		'label'	=> __('404 button Label','the-wp-business'),
+		'section'	=> 'the_wp_business_404_settings',
+		'type'		=> 'text'
+	));	
+
+	$wp_customize->add_setting('the_wp_business_search_result_title',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));	
+	$wp_customize->add_control('the_wp_business_search_result_title',array(
+		'label'	=> __('No Search Result Title','the-wp-business'),
+		'section'	=> 'the_wp_business_404_settings',
+		'type'		=> 'text'
+	));	
+
+	$wp_customize->add_setting('the_wp_business_search_result_text',array(
+		'default'	=> '',
+		'sanitize_callback'	=> 'sanitize_text_field'
+	));	
+	$wp_customize->add_control('the_wp_business_search_result_text',array(
+		'label'	=> __('No Search Result Text','the-wp-business'),
 		'section'	=> 'the_wp_business_404_settings',
 		'type'		=> 'text'
 	));	
@@ -1138,7 +1335,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('the_wp_business_products_per_page',array(
 		'default'=> '9',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_products_per_page',array(
 		'label'	=> __('Products Per Page','the-wp-business'),
@@ -1153,7 +1350,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_products_per_row',array(
 		'default'=> '3',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_choices'
 	));
 	$wp_customize->add_control('the_wp_business_products_per_row',array(
 		'label'	=> __('Products Per Row','the-wp-business'),
@@ -1165,6 +1362,276 @@ function the_wp_business_customize_register( $wp_customize ) {
 		'section'=> 'the_wp_business_woocommerce',
 		'type'=> 'select',
 	));
+
+	$wp_customize->add_setting('the_wp_business_product_border',array(
+       'default' => false,
+       'sanitize_callback'	=> 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('the_wp_business_product_border',array(
+       'type' => 'checkbox',
+       'label' => __('Show / Hide product border','the-wp-business'),
+       'section' => 'the_wp_business_woocommerce',
+    ));
+
+    $wp_customize->add_setting('the_wp_business_product_padding',array(
+		'sanitize_callback'	=> 'esc_html'
+	));
+	$wp_customize->add_control('the_wp_business_product_padding',array(
+		'label'	=> esc_html__('Product Padding','the-wp-business'),
+		'section'=> 'the_wp_business_woocommerce',
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_top_padding',array(
+		'default' => 5,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_top_padding', array(
+		'label' => esc_html__( 'Top','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_bottom_padding',array(
+		'default' => 5,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_bottom_padding', array(
+		'label' => esc_html__( 'Bottom','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_left_padding',array(
+		'default' => 5,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_left_padding', array(
+		'label' => esc_html__( 'Left','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_right_padding',array(
+		'default' => 5,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_right_padding', array(
+		'label' => esc_html__( 'Right','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_border_radius',array(
+		'default' => '0',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+	$wp_customize->add_control( new The_WP_Business_WP_Customize_Range_Control( $wp_customize, 'the_wp_business_product_border_radius', array(
+        'label'  => __('Product Border Radius','the-wp-business'),
+        'section'  => 'the_wp_business_woocommerce',
+        'description' => __('Measurement is in pixel.','the-wp-business'),
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 50,
+        )
+    )));
+
+	$wp_customize->add_setting('the_wp_business_product_button_padding',array(
+		'sanitize_callback'	=> 'esc_html'
+	));
+	$wp_customize->add_control('the_wp_business_product_button_padding',array(
+		'label'	=> esc_html__('Product Button Padding','the-wp-business'),
+		'section'=> 'the_wp_business_woocommerce',
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_button_top_padding',array(
+		'default' => 10,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_button_top_padding', array(
+		'label' => esc_html__( 'Top','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_button_bottom_padding',array(
+		'default' => 10,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_button_bottom_padding', array(
+		'label' => esc_html__( 'Bottom','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_button_left_padding',array(
+		'default' => 15,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_button_left_padding', array(
+		'label' => esc_html__( 'Left','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_button_right_padding',array(
+		'default' => 15,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_button_right_padding', array(
+		'label' => esc_html__( 'Right','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_button_border_radius',array(
+		'default' => '0',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+	$wp_customize->add_control( new The_WP_Business_WP_Customize_Range_Control( $wp_customize, 'the_wp_business_product_button_border_radius', array(
+        'label'  => __('Product Button Border Radius','the-wp-business'),
+        'section'  => 'the_wp_business_woocommerce',
+        'description' => __('Measurement is in pixel.','the-wp-business'),
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 50,
+        )
+    )));
+
+    $wp_customize->add_setting('the_wp_business_product_sale_position',array(
+        'default' => __('Right','the-wp-business'),
+        'sanitize_callback' => 'the_wp_business_sanitize_choices'
+	));
+	$wp_customize->add_control('the_wp_business_product_sale_position',array(
+        'type' => 'radio',
+        'label' => __('Product Sale Position','the-wp-business'),
+        'section' => 'the_wp_business_woocommerce',
+        'choices' => array(
+            'Left' => __('Left','the-wp-business'),
+            'Right' => __('Right','the-wp-business'),
+        ),
+	) );
+
+    $wp_customize->add_setting('the_wp_business_product_sale_padding',array(
+		'sanitize_callback'	=> 'esc_html'
+	));
+	$wp_customize->add_control('the_wp_business_product_sale_padding',array(
+		'label'	=> esc_html__('Product Sale Padding','the-wp-business'),
+		'section'=> 'the_wp_business_woocommerce',
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_sale_top_padding',array(
+		'default' => 0,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_sale_top_padding', array(
+		'label' => esc_html__( 'Top','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_sale_bottom_padding',array(
+		'default' => 0,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_sale_bottom_padding', array(
+		'label' => esc_html__( 'Bottom','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_sale_left_padding',array(
+		'default' => 0,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_sale_left_padding', array(
+		'label' => esc_html__( 'Left','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting('the_wp_business_product_sale_right_padding',array(
+		'default' => 0,
+		'sanitize_callback' => 'the_wp_business_sanitize_float'
+	));
+	$wp_customize->add_control('the_wp_business_product_sale_right_padding', array(
+		'label' => esc_html__( 'Right','the-wp-business' ),
+		'type' => 'number',
+		'section' => 'the_wp_business_woocommerce',
+		'input_attrs' => array(
+			'min' => 0,
+			'max' => 50,
+			'step' => 1,
+		),
+	));
+
+	$wp_customize->add_setting( 'the_wp_business_product_sale_border_radius',array(
+		'default' => '50',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+	$wp_customize->add_control( new The_WP_Business_WP_Customize_Range_Control( $wp_customize, 'the_wp_business_product_sale_border_radius', array(
+        'label'  => __('Product Sale Border Radius','the-wp-business'),
+        'section'  => 'the_wp_business_woocommerce',
+        'description' => __('Measurement is in pixel.','the-wp-business'),
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 50,
+        )
+    )));
 
 	//Footer
 	$wp_customize->add_section('the_wp_business_footer_section',array(
@@ -1226,7 +1693,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting('the_wp_business_top_copyright_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_top_copyright_padding',array(
 		'description'	=> __('Top','the-wp-business'),
@@ -1241,7 +1708,7 @@ function the_wp_business_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('the_wp_business_bottom_copyright_padding',array(
 		'default'=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'the_wp_business_sanitize_float'
 	));
 	$wp_customize->add_control('the_wp_business_bottom_copyright_padding',array(
 		'description'	=> __('Bottom','the-wp-business'),

@@ -4,7 +4,6 @@ Tags: left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-
 Requires at least: 5.0
 Tested up to: 5.4.1
 Requires PHP: 7.2.14
-Stable tag: 1.5.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -175,6 +174,33 @@ Yes, ThemesGlance provide full support regarding all the themes through support 
 * Added Products per row option.
 * Updated .pot file in language folder.
 
+= 1.5.2 =
+* Added Show/Hide Search option.
+* Added Topbar top bottom padding option.
+* Added Preloader type option.
+* Added Slider speed option.
+* Added No Search Result title & text options.
+* Added show/hide product border and border radius options.
+* Added Product top, bottom, left and right padding options.
+* Added Product button top, bottom, left & right padding options.
+* Added Product button border radius options.
+* Added Product sale top, bottom, left & right padding options.
+* Added Products sale border radius option,
+* Added Products sale position option.
+* Resolved some theme errors.
+* Updated .pot file in language folder. 
+
+= 1.5.3 =
+* Added Comment Textarea width option.
+* Added Comment Title option.
+* Added Comment Submit button label option.
+* Added Show/Hide Slider Image Overlay option.
+* Added Slider Image overlay Color option.
+* Added Show/hide Single post featured image option.
+* Added Show/hide single post navigation option.
+* Added Single post Navigation Preivous/Next text options.
+* Updated .pot file in language folder.
+
 == Resources ==
 
 The WP Business WordPress Theme, Copyright 2017 Themesglance
@@ -206,7 +232,7 @@ Theme is Built using the following resource bundles.
    - Dave Gandy
    - Copyright July 12, 2018, Dave Gandy 
    - https://github.com/FortAwesome/Font-Awesome.git
-   - License: Font Awesome Free 5.0.6
+   - License: Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License
    - http://fontawesome.com/license
 
 3  Superfish 

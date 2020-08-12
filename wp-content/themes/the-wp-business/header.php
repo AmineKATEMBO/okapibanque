@@ -13,7 +13,6 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width">
-  <link rel="profile" href="<?php echo esc_url( __( 'http://gmpg.org/xfn/11', 'the-wp-business' ) ); ?>">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -23,10 +22,18 @@
     do_action( 'wp_body_open' );
   }?>
   <?php if(get_theme_mod('the_wp_business_preloader',true)){ ?>
-    <div id="overlayer"></div>
-    <span class="tg-loader">
-      <span class="tg-loader-inner"></span>
-    </span>
+    <?php if(get_theme_mod( 'the_wp_business_preloader_type','Square') == 'Square'){ ?>
+      <div id="overlayer"></div>
+      <span class="tg-loader">
+        <span class="tg-loader-inner"></span>
+      </span>
+    <?php }else if(get_theme_mod( 'the_wp_business_preloader_type') == 'Circle') {?>    
+      <div class="preloader">
+        <div class="preloader-container">
+          <span class="animated-preloader"></span>
+        </div>
+      </div>
+    <?php }?>
   <?php }?>
   <header role="banner">
     <a class="screen-reader-text skip-link" href="#maincontent"><?php esc_html_e( 'Skip to content', 'the-wp-business' ); ?><span class="screen-reader-text"><?php esc_html_e( 'Skip to content', 'the-wp-business' ); ?></span></a>
@@ -66,34 +73,35 @@
       <?php }?>
       <div class="toggle-menu responsive-menu">
         <button role="tab" onclick="the_wp_business_resMenu_open()"><i class="fas fa-bars"></i><?php esc_html_e('Menu','the-wp-business'); ?><span class="screen-reader-text"><?php esc_html_e('Menu','the-wp-business'); ?></span></button>
-        <div class="wrap"><?php get_search_form(); ?></div>
+        <?php if(get_theme_mod('the_wp_business_show_search',true) ){ ?>
+          <div class="wrap"><?php get_search_form(); ?></div>
+        <?php }?>
       </div>
       <div class="menu-sec <?php if( get_theme_mod( 'the_wp_business_sticky_header') != '') { ?> sticky-header"<?php } else { ?>close-sticky <?php } ?>">
         <div class="container">
           <div class="row">
             <div class="logo col-lg-3 col-md-5 wow bounceInDown">
               <?php if ( has_custom_logo() ) : ?>
-                  <div class="site-logo"><?php the_custom_logo(); ?></div>
-              <?php else: ?>
-                <?php $blog_info = get_bloginfo( 'name' ); ?>
-                <?php if ( ! empty( $blog_info ) ) : ?>
-                  <?php if ( is_front_page() && is_home() ) : ?>
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                  <?php else : ?>
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                  <?php endif; ?>
+                <div class="site-logo"><?php the_custom_logo(); ?></div>
+              <?php endif; ?> 
+              <?php $blog_info = get_bloginfo( 'name' ); ?>
+              <?php if ( ! empty( $blog_info ) ) : ?>
+                <?php if ( is_front_page() && is_home() ) : ?>
+                  <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php else : ?>
+                  <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
                 <?php endif; ?>
-                <?php
-                $description = get_bloginfo( 'description', 'display' );
-                if ( $description || is_customize_preview() ) :
-                  ?>
-                  <p class="site-description">
-                    <?php echo esc_html($description); ?>
-                  </p>
-                <?php endif; ?>  
-              <?php endif; ?>  
+              <?php endif; ?>
+              <?php
+              $description = get_bloginfo( 'description', 'display' );
+              if ( $description || is_customize_preview() ) :
+                ?>
+                <p class="site-description">
+                  <?php echo esc_html($description); ?>
+                </p>
+              <?php endif; ?>   
             </div>
-            <div class="menubox col-lg-6 col-md-3">
+            <div class="menubox <?php if(get_theme_mod('the_wp_business_show_search',true)) { ?>col-lg-6 col-md-3" <?php } else { ?>col-lg-7 col-md-5 <?php } ?>">
               <div id="sidelong-menu" class="nav side-nav">
                 <nav id="primary-site-navigation" class="nav-menu" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'the-wp-business' ); ?>">
                   <?php 
@@ -109,9 +117,11 @@
                 </nav>
               </div>
             </div>
-            <div class="search-box col-lg-1 col-md-2">
-              <div class="wrap"><?php get_search_form(); ?></div>
-            </div>
+            <?php if(get_theme_mod('the_wp_business_show_search',true) ){ ?>
+              <div class="search-box col-lg-1 col-md-2">
+                <div class="wrap"><?php get_search_form(); ?></div>
+              </div>
+            <?php }?>
             <?php if ( get_theme_mod('the_wp_business_button_url','') != "" ) {?>
               <div class="col-lg-2 col-md-4 pl-0">
                 <div class ="testbutton">

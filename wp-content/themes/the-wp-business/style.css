@@ -4,7 +4,9 @@ Theme URI: https://www.themesglance.com/themes/wp-business-wordpress-theme/
 Author: Themesglance
 Author URI: https://www.themesglance.com/
 Description: The WP Business WordPress Theme is a highly customizable, mobile-friendly and user-friendly theme created precisely for business enterprises, business portfolios, non-profit organizations, personal, commercial, health, construction, corporate businesses, digital agency, product showcase, portfolio, consultants, bloggers and freelancers. It’s helpful to create corporate identity of multiple industries like hotels, tours, hospitals, and even shop stores. This elegant and stylish business WordPress theme is cross browser compatible and suits the latest WordPress version. It is made completely using secure and clean code due to which even a non-coder finds it extremely easy to use. It is SEO friendly making your website found on search engines. You can even spread your site on social media platforms. It’s built on Bootstrap. It offers various personalization options. Moreover, this beautiful and professional The WP Business WordPress Theme is free. The testimonial section tells clients reviews and the banner has Call to Action Button (CTA) directing the visitor to another page. The customization becomes very easy because of optimized codes. Some shortcodes are there to create new sections. You can engage the audience because of the multipurpose nature and fast page loading time. So, grab away this stunning and interactive The WP Business WordPress theme now. Demo: http://www.themesglance.com/wp-business-theme/
-Version: 1.5.1
+Version: 1.5.3
+Tested up to: 5.4.1
+Requires PHP: 7.2.14
 License: GNU General Public License
 License URI: license.txt
 Text Domain: the-wp-business
@@ -508,10 +510,6 @@ ul.list_nav {
 }
 
 /*----- PRELOADING -------- */
-.elementor-html .tg-loader,
-.elementor-html #overlayer{
-  display: none;
-}
 #overlayer {
   width:100%;
   height:100%;  
@@ -570,6 +568,152 @@ ul.list_nav {
   100% {
     height: 0%;
   }
+}
+
+.elementor-html .tg-loader,
+.elementor-html #overlayer,
+.elementor-html .preloader{
+  display: none;
+}
+
+@-webkit-keyframes preloader-inside-white {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes preloader-inside-white {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes preloader-inside-red {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  30% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes preloader-inside-red {
+  0% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  30% {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+/* Styles */
+.preloader {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: white;
+  text-align: center;
+}
+.preloader .preloader-container {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 44%;
+  left: 0;
+  position: relative;
+}
+.preloader .preloader-container .animated-preloader {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  border-radius: 50em;
+}
+.preloader .preloader-container .animated-preloader:after {
+  content: '';
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50em;
+  background: white;
+  -webkit-animation: preloader-inside-white 1s ease-in-out infinite;
+  -ms-animation: preloader-inside-white 1s ease-in-out infinite;
+  animation: preloader-inside-white 1s ease-in-out infinite;
+}
+.preloader .preloader-container .animated-preloader:before {
+  content: '';
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 50em;
+  background: #333;
+  -webkit-animation: preloader-inside-red 1s ease-in-out infinite;
+  -ms-animation: preloader-inside-red 1s ease-in-out infinite;
+  animation: preloader-inside-red 1s ease-in-out infinite;
 }
 
 /*----------Sticky Header------*/
@@ -723,20 +867,21 @@ input[type="search"] {
 }
 .testbutton {
 	text-align: right;
-    margin-top: 21px;
+  margin-top: 9px;
 }
 .page-template-custom-front-page .testbutton a {
-    border:none;
+  border:none;
 }
 .testbutton a {
-    background: #1e7600;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    border:2px solid;
+  background: #1e7600;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border:2px solid;
+  display: inline-block;
 }
 .wrap input[type="search"]::placeholder{
   padding: 15px 10px;
@@ -779,7 +924,7 @@ input[type="search"] {
   z-index: 999;
   cursor: text;
   padding-right: 0;
-  top: -14px;
+  top: -10px;
   right: 58px;
   border: 2px solid #000;
   padding:10px;
@@ -887,7 +1032,7 @@ input.search-field {
 }
 li.product {
   background: #fff;
-  padding: 5px !important;
+  padding: 5px;
   text-align:  center;
 }
 li.product:hover {
@@ -1482,6 +1627,9 @@ h1.search-title {
 #comments{
 	margin-top:25px;
 }
+#comments p.comment-form-comment label{
+  display: block;
+}
 #comments h2.comments-title{
 	font-size: 22px;
   font-weight: bold;
@@ -1863,6 +2011,31 @@ iframe {
 	font-weight:normal;
 }
 /* ------------Navigation Links------------*/
+.navigation .nav-previous a, .navigation .nav-next a{
+  color: #fff;
+  background: #1e7600;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 10px;
+}
+.navigation .nav-previous a::before {
+  content: "\f100";
+  display: inline-block;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-size: 16px;
+  margin: 0 8px 0 0;
+  font-weight: 900;
+}
+.navigation .nav-next a::after {
+  content: "\f101";
+  display: inline-block;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-size: 16px;
+  margin: 0 0 0 8px; 
+  font-weight: 900;
+}
 .nav-previous {
   float: left;
   width: 50%;
@@ -1879,14 +2052,6 @@ iframe {
 	width: 50%;
 	text-align: right;
 	margin: 15px 0;
-}
-span.meta-nav {
-  clear: both;
-  font-size: 15px;
-  color: #fff;
-  font-weight: 600;
-  padding: 6px 10px;
-  background: #1e7600;
 }
 span.post-title {
   font-size: 16px;
@@ -1967,12 +2132,18 @@ span.post-title {
     position: fixed;
     z-index: 9999999;
     top: 110%;
+    visibility: hidden;
     right: 0;
     overflow-y: scroll;
     background-color: #000;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.5s top ease-in-out;
     padding-top: 60px;
+  }
+  .side-nav.show{
+    visibility: visible;
+    top: 58px;
+    transition: 0.5s top ease-in-out;
   }
   .side-nav .closebtn {
     position: absolute;
@@ -2138,6 +2309,13 @@ span.post-title {
 	.search-box {
   	margin: 22px 0;
 	}
+  .page-template-custom-front-page #header{
+    position: static;
+    background: #1e7600;
+  }
+  .page-template-custom-front-page .testbutton a{
+    border: 2px solid #fff;
+  }
   #header .logo,
   #header .logo h1, #header .logo p.site-title{
     text-align: left;
@@ -2155,7 +2333,7 @@ span.post-title {
 		display: none;
 	}
 	#slider .carousel-caption{
-		top: 60%;
+		top: 50%;
 	}
   .related.products ul.products li.product{
     width: 48%;

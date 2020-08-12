@@ -163,7 +163,7 @@
 		$the_wp_business_custom_css .=' .tg-loader{';
 			$the_wp_business_custom_css .='border-color: '.esc_html($the_wp_business_preloader_color).';';
 		$the_wp_business_custom_css .='} ';
-		$the_wp_business_custom_css .=' .tg-loader-inner{';
+		$the_wp_business_custom_css .=' .tg-loader-inner, .preloader .preloader-container .animated-preloader, .preloader .preloader-container .animated-preloader:before{';
 			$the_wp_business_custom_css .='background-color: '.esc_html($the_wp_business_preloader_color).';';
 		$the_wp_business_custom_css .='} ';
 	}
@@ -171,7 +171,7 @@
 	$the_wp_business_preloader_bg_color = get_theme_mod('the_wp_business_preloader_bg_color');
 
 	if($the_wp_business_preloader_bg_color != false){
-		$the_wp_business_custom_css .=' #overlayer{';
+		$the_wp_business_custom_css .=' #overlayer, .preloader{';
 			$the_wp_business_custom_css .='background-color: '.esc_html($the_wp_business_preloader_bg_color).';';
 		$the_wp_business_custom_css .='} ';
 	}
@@ -228,3 +228,108 @@
 	$the_wp_business_custom_css .='#footer .copyright p{';
 		$the_wp_business_custom_css .='font-size: '.esc_html($the_wp_business_copyright_font_size).'px;';
 	$the_wp_business_custom_css .='}';
+
+	/*------ Topbar padding ------*/
+	$the_wp_business_top_topbar_padding = get_theme_mod('the_wp_business_top_topbar_padding');
+	$the_wp_business_bottom_topbar_padding = get_theme_mod('the_wp_business_bottom_topbar_padding');
+	if($the_wp_business_top_topbar_padding != false || $the_wp_business_bottom_topbar_padding != false){
+		$the_wp_business_custom_css .='#header .header-top{';
+			$the_wp_business_custom_css .='padding-top: '.esc_html($the_wp_business_top_topbar_padding).'px; padding-bottom: '.esc_html($the_wp_business_bottom_topbar_padding).'px; ';
+		$the_wp_business_custom_css .='}';
+	}
+
+	/*------ Woocommerce ----*/
+	$the_wp_business_product_border = get_theme_mod('the_wp_business_product_border',false);
+
+	if($the_wp_business_product_border == true){
+		$the_wp_business_custom_css .='.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{';
+			$the_wp_business_custom_css .='border: 1px solid #dcdcdc;';
+		$the_wp_business_custom_css .='}';
+	}
+
+	$the_wp_business_product_top = get_theme_mod('the_wp_business_product_top_padding', 5);
+	$the_wp_business_product_bottom = get_theme_mod('the_wp_business_product_bottom_padding', 5);
+	$the_wp_business_product_left = get_theme_mod('the_wp_business_product_left_padding', 5);
+	$the_wp_business_product_right = get_theme_mod('the_wp_business_product_right_padding', 5);
+	$the_wp_business_custom_css .='.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{';
+		$the_wp_business_custom_css .='padding-top: '.esc_html($the_wp_business_product_top).'px; padding-bottom: '.esc_html($the_wp_business_product_bottom).'px; padding-left: '.esc_html($the_wp_business_product_left).'px; padding-right: '.esc_html($the_wp_business_product_right).'px;';
+	$the_wp_business_custom_css .='}';
+
+	$the_wp_business_product_border_radius = get_theme_mod('the_wp_business_product_border_radius');
+	$the_wp_business_custom_css .='.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{';
+		$the_wp_business_custom_css .='border-radius: '.esc_html($the_wp_business_product_border_radius).'px;';
+	$the_wp_business_custom_css .='}';
+
+	/*----- WooCommerce button css --------*/
+	$the_wp_business_product_button_top = get_theme_mod('the_wp_business_product_button_top_padding',10);
+	$the_wp_business_product_button_bottom = get_theme_mod('the_wp_business_product_button_bottom_padding',10);
+	$the_wp_business_product_button_left = get_theme_mod('the_wp_business_product_button_left_padding',15);
+	$the_wp_business_product_button_right = get_theme_mod('the_wp_business_product_button_right_padding',15);
+	$the_wp_business_custom_css .='.woocommerce ul.products li.product .button, .woocommerce div.product form.cart .button, a.button.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce #payment #place_order, .woocommerce-page #payment #place_order, button.woocommerce-button.button.woocommerce-form-login__submit, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled]{';
+		$the_wp_business_custom_css .='padding-top: '.esc_html($the_wp_business_product_button_top).'px; padding-bottom: '.esc_html($the_wp_business_product_button_bottom).'px; padding-left: '.esc_html($the_wp_business_product_button_left).'px; padding-right: '.esc_html($the_wp_business_product_button_right).'px;';
+	$the_wp_business_custom_css .='}';
+
+	$the_wp_business_product_button_border_radius = get_theme_mod('the_wp_business_product_button_border_radius');
+	$the_wp_business_custom_css .='.woocommerce ul.products li.product .button, .woocommerce div.product form.cart .button, a.button.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button, a.checkout-button.button.alt.wc-forward, .woocommerce #payment #place_order, .woocommerce-page #payment #place_order, button.woocommerce-button.button.woocommerce-form-login__submit{';
+		$the_wp_business_custom_css .='border-radius: '.esc_html($the_wp_business_product_button_border_radius).'px;';
+	$the_wp_business_custom_css .='}';
+
+	/*----- WooCommerce product sale css --------*/
+	$the_wp_business_product_sale_top = get_theme_mod('the_wp_business_product_sale_top_padding');
+	$the_wp_business_product_sale_bottom = get_theme_mod('the_wp_business_product_sale_bottom_padding');
+	$the_wp_business_product_sale_left = get_theme_mod('the_wp_business_product_sale_left_padding');
+	$the_wp_business_product_sale_right = get_theme_mod('the_wp_business_product_sale_right_padding');
+	$the_wp_business_custom_css .='.woocommerce span.onsale {';
+		$the_wp_business_custom_css .='padding-top: '.esc_html($the_wp_business_product_sale_top).'px; padding-bottom: '.esc_html($the_wp_business_product_sale_bottom).'px; padding-left: '.esc_html($the_wp_business_product_sale_left).'px; padding-right: '.esc_html($the_wp_business_product_sale_right).'px;';
+	$the_wp_business_custom_css .='}';
+
+	$the_wp_business_product_sale_border_radius = get_theme_mod('the_wp_business_product_sale_border_radius',50);
+	$the_wp_business_custom_css .='.woocommerce span.onsale {';
+		$the_wp_business_custom_css .='border-radius: '.esc_html($the_wp_business_product_sale_border_radius).'px;';
+	$the_wp_business_custom_css .='}';
+
+	$the_wp_business_menu_case = get_theme_mod('the_wp_business_product_sale_position', 'Right');
+	if($the_wp_business_menu_case == 'Right' ){
+		$the_wp_business_custom_css .='.woocommerce ul.products li.product .onsale{';
+			$the_wp_business_custom_css .=' left:auto; right:0;';
+		$the_wp_business_custom_css .='}';
+	}elseif($the_wp_business_menu_case == 'Left' ){
+		$the_wp_business_custom_css .='.woocommerce ul.products li.product .onsale{';
+			$the_wp_business_custom_css .=' left:-10px; right:auto;';
+		$the_wp_business_custom_css .='}';
+	}
+
+	/*---- Slider Image overlay -----*/
+	$the_wp_business_slider_image_overlay = get_theme_mod('the_wp_business_slider_image_overlay',true);
+	if($the_wp_business_slider_image_overlay == false){
+		$the_wp_business_custom_css .='#slider img {';
+			$the_wp_business_custom_css .='opacity: 1;';
+		$the_wp_business_custom_css .='}';
+	}
+
+	$the_wp_business_slider_overlay_color = get_theme_mod('the_wp_business_slider_overlay_color');
+	if($the_wp_business_slider_overlay_color != false){
+		$the_wp_business_custom_css .='#slider  {';
+			$the_wp_business_custom_css .='background-color: '.esc_html($the_wp_business_slider_overlay_color).';';
+		$the_wp_business_custom_css .='}';
+	}
+
+	/*---- Comment form ----*/
+	$the_wp_business_comment_width = get_theme_mod('the_wp_business_comment_width', '100');
+	$the_wp_business_custom_css .='#comments textarea{';
+		$the_wp_business_custom_css .=' width:'.esc_html($the_wp_business_comment_width).'%;';
+	$the_wp_business_custom_css .='}';
+
+	$the_wp_business_comment_submit_text = get_theme_mod('the_wp_business_comment_submit_text', 'Post Comment');
+	if($the_wp_business_comment_submit_text == ''){
+		$the_wp_business_custom_css .='#comments p.form-submit {';
+			$the_wp_business_custom_css .='display: none;';
+		$the_wp_business_custom_css .='}';
+	}
+
+	$the_wp_business_comment_title = get_theme_mod('the_wp_business_comment_title', 'Leave a Reply');
+	if($the_wp_business_comment_title == ''){
+		$the_wp_business_custom_css .='#comments h2#reply-title {';
+			$the_wp_business_custom_css .='display: none;';
+		$the_wp_business_custom_css .='}';
+	}
