@@ -2,14 +2,77 @@
 # This file is distributed under the same license as the Plugins - Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-06 15:50:21+0000\n"
+"PO-Revision-Date: 2020-08-11 12:41:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/3.0.0-alpha\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP) - Stable (latest release)\n"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:975
+msgid "something"
+msgstr "quelque chose"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:960
+msgid "makes"
+msgstr "fait"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:811
+msgid "authentic"
+msgstr "authentique"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:801
+msgid "revolutionary"
+msgstr "révolutionnaire"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:793
+msgid "refundable"
+msgstr "remboursable"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:790
+msgid "last minute"
+msgstr "dernière minute"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:759
+msgid "skill"
+msgstr "compétence"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:758
+msgid "helpful"
+msgstr "utile"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:751
+msgid "perspective"
+msgstr "perspective"
+
+#: includes/helpers.php:624
+msgid "Yemen"
+msgstr "Yémen"
+
+#: includes/helpers.php:625
+msgid "Zambia"
+msgstr "Zambie"
+
+#: includes/helpers.php:626
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#. translators: Yearly archive title. %s: Year
+#: includes/helpers.php:1152
+msgid "Year: %s"
+msgstr "Année : %s"
+
+#. translators: Yearly archive title. %s: Year
+#: includes/helpers.php:1152
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: lite/includes/admin/connect.php:170
+msgid "You are not licensed."
+msgstr "Vous n’avez pas de licence."
 
 #: lite/includes/admin/reports/report-realtime.php:22
 msgid "Real Time"
@@ -19,7 +82,7 @@ msgstr "Temps réel"
 msgid "Year in Review"
 msgstr "Bilan de l’année"
 
-#: lite/includes/admin/welcome.php:52 lite/includes/admin/welcome.php:53
+#: lite/includes/admin/welcome.php:56 lite/includes/admin/welcome.php:57
 msgid "Welcome to ExactMetrics"
 msgstr "Bienvenue sur ExactMetrics"
 
@@ -27,11 +90,11 @@ msgstr "Bienvenue sur ExactMetrics"
 msgid "ExactMetrics Authentication"
 msgstr "Authentification ExactMetrics"
 
-#: lite/includes/admin/wp-site-health.php:179
+#: lite/includes/admin/wp-site-health.php:253
 msgid "View Reports"
 msgstr "Voir les rapports"
 
-#: lite/includes/admin/wp-site-health.php:233
+#: lite/includes/admin/wp-site-health.php:307
 msgid "Go to License Settings"
 msgstr "Aller aux réglages de licence"
 
@@ -40,150 +103,343 @@ msgid "Click here to Upgrade"
 msgstr "Cliquez ici pour mettre à niveau"
 
 #. Translators: The error message received.
-#: lite/includes/admin/wp-site-health.php:391
+#: lite/includes/admin/wp-site-health.php:465
 msgid "Error message: %s"
 msgstr "Message d’erreur : %s"
 
-#: languages/vue.php:1961
+#: lite/includes/admin/wp-site-health.php:335
+msgid "Your website is receiving minor updates"
+msgstr "Votre site web reçoit des mises à jour mineures"
+
+#: lite/includes/admin/wp-site-health.php:322
+msgid "Your website is receiving automatic updates"
+msgstr "Votre site web reçoit des mises à jour automatiques"
+
+#: includes/admin/common.php:857
+msgid "Your 2019 Analytics Report"
+msgstr "Votre rapport d’analyse 2019"
+
+#: includes/admin/pages/settings.php:115
+msgid "Your browser version is not supported"
+msgstr "Votre version de navigateur n’est pas prise en charge"
+
+#: includes/admin/review.php:120
+msgid "Yes"
+msgstr "Oui"
+
+#: includes/admin/routes.php:664 lite/includes/admin/onboarding-wizard.php:244
+msgid "You are not allowed to install plugins"
+msgstr "Vous n’êtes pas autorisé·e à installer des extensions"
+
+#: languages/vue.php:1601
+msgid "You appear to be offline."
+msgstr "Vous semblez hors ligne."
+
+#: languages/vue.php:911
+msgid "Your Website"
+msgstr "Votre site web"
+
+#: languages/vue.php:1650
+msgid "You appear to be offline. Addon not deactivated."
+msgstr "Vous semblez hors ligne. Module non désactivé."
+
+#: languages/vue.php:1657
+msgid "You appear to be offline. Plugin not installed."
+msgstr "Vous semblez hors ligne. Extension non installée."
+
+#: languages/vue.php:1664
+msgid "You appear to be offline. Addon not installed."
+msgstr "Vous semblez hors ligne. Module non installé."
+
+#: languages/vue.php:2088
 msgid "Performance"
 msgstr "Performance"
 
-#: languages/vue.php:1995
+#: languages/vue.php:2039
 msgid "Yes, hide it!"
 msgstr "Oui, masquez-le !"
 
-#: languages/vue.php:2011
+#: languages/vue.php:1939
 msgid "Paste your license key here"
 msgstr "Collez votre clé de licence ici"
 
-#: languages/vue.php:2017
+#: languages/vue.php:1943
 msgid "Verify"
 msgstr "Vérifier"
 
-#: languages/vue.php:2026
+#: languages/vue.php:1952
 msgid "Relaunch Setup Wizard"
 msgstr "Relancer l’assistant de configuration"
 
-#: languages/vue.php:2058
+#: languages/vue.php:2008
 msgid "Activating..."
 msgstr "Activation…"
 
-#: languages/vue.php:2061
+#: languages/vue.php:2011
 msgid "Deactivating..."
 msgstr "Désactivation…"
 
-#: languages/vue.php:2064
+#: languages/vue.php:2014
 msgid "Deactivate"
 msgstr "Désactiver"
 
-#: languages/vue.php:2067
+#: languages/vue.php:2119
 msgid "Upgrade"
 msgstr "Mettre à niveau"
 
-#: languages/vue.php:2113
+#: languages/vue.php:1608
+msgid "You appear to be offline. Settings not saved."
+msgstr "Vous semblez hors ligne. Réglages non enregistrés."
+
+#: languages/vue.php:1980
 msgid "Show"
 msgstr "Afficher"
 
 #. Translators: The number of results.
-#: languages/vue.php:2117
+#: languages/vue.php:1984
 msgid "%s results"
 msgstr "%s résultats"
 
-#: languages/vue.php:2123
+#: languages/vue.php:2058
 msgid "Your site is connected to ExactMetrics!"
 msgstr "Votre site est connecté à ExactMetrics !"
 
-#: languages/vue.php:1982
+#: languages/vue.php:2100
 msgid "Allow usage tracking"
 msgstr "Autoriser le suivi de l'utilisation"
 
-#: languages/vue.php:1998
+#: languages/vue.php:2042
 msgid "No, cancel!"
 msgstr "Non, annuler !"
 
-#: languages/vue.php:2020
+#: languages/vue.php:1946
 msgid "Setup Wizard"
 msgstr "Assistant de configuration"
 
-#: languages/vue.php:2042
+#: languages/vue.php:1864
 msgid "See all features"
 msgstr "Voir toutes les fonctionnalités"
 
-#: languages/vue.php:2080
+#: languages/vue.php:1867
 msgid "Upgrade to"
 msgstr "Mettre à niveau vers"
 
-#: languages/vue.php:2083
+#: languages/vue.php:1870
 msgid "Last 30 days"
 msgstr "30 derniers jours"
 
-#: languages/vue.php:1807
+#: languages/vue.php:1714
 msgid "No options available"
 msgstr "Aucune option disponible"
 
-#: languages/vue.php:1810
+#: languages/vue.php:1698
 msgid "Network Active"
 msgstr "Activé sur le réseau"
 
-#: languages/vue.php:1967
+#: languages/vue.php:1636
+msgid "You appear to be offline. WPForms not installed."
+msgstr "Vous semblez hors ligne. WPForms non installé."
+
+#: languages/vue.php:1643
+msgid "You appear to be offline. Addon not activated."
+msgstr "Vous semblez hors ligne. Module non activé."
+
+#: languages/vue.php:1465
 msgid "Miscellaneous"
 msgstr "Divers"
 
-#: languages/vue.php:2014
+#: languages/vue.php:1462
 msgid "Google Authentication"
 msgstr "Authentification Google"
 
-#: languages/vue.php:1052
+#: languages/vue.php:986
 msgid "Not Available"
 msgstr "Non disponible"
 
-#: languages/vue.php:1064
+#: languages/vue.php:998
 msgid "Limited Support"
 msgstr "Support limité"
 
-#: languages/vue.php:1067
+#: languages/vue.php:1001
 msgid "Priority Support"
 msgstr "Support prioritaire"
 
-#: languages/vue.php:1073
+#: languages/vue.php:1007
 msgid "Feature"
 msgstr "Fonctionnalité"
 
-#: languages/vue.php:1079
+#: languages/vue.php:1013
 msgid "Pro"
 msgstr "Pro"
 
-#: languages/vue.php:1774
+#: languages/vue.php:522
 msgid "Desktop"
 msgstr "Ordinateur de bureau"
 
-#: languages/vue.php:1777
+#: languages/vue.php:525
 msgid "Tablet"
 msgstr "Tablette"
 
-#: languages/vue.php:1780
+#: languages/vue.php:528
 msgid "Mobile"
 msgstr "Mobile"
 
-#: languages/vue.php:1783
+#: languages/vue.php:543
 msgid "Top 10 Countries"
 msgstr "Top 10 des pays"
 
-#: languages/vue.php:1786
+#: languages/vue.php:546
 msgid "View Countries Report"
 msgstr "Voir le rapport sur les pays"
 
-#: languages/vue.php:1789
+#: languages/vue.php:549
 msgid "Top 10 Referrals"
 msgstr "Top 10 des référents"
 
-#: languages/vue.php:1792
+#: languages/vue.php:552
 msgid "View All Referral Sources"
 msgstr "Afficher toutes les sources référentes"
 
-#: languages/vue.php:1076
+#: languages/vue.php:1010
 msgid "Lite"
 msgstr "Lite"
+
+#: includes/admin/admin.php:60 includes/admin/admin.php:103
+#: languages/vue.php:102
+msgid "About Us"
+msgstr "À propos de nous"
+
+#: includes/admin/admin.php:284 languages/vue.php:145
+msgid "Learn More"
+msgstr "En apprendre plus"
+
+#: includes/admin/admin.php:309 languages/vue.php:435
+msgid "Your license key for ExactMetrics has been disabled. Please use a different key."
+msgstr "Votre clé de licence pour ExactMetrics a été désactivée. Veuillez utiliser une clé différente."
+
+#: includes/admin/reports/overview.php:34 languages/vue.php:71
+msgid "Overview"
+msgstr "Vue d’ensemble"
+
+#: languages/vue.php:48
+msgid "Learn more about updating PHP"
+msgstr "En savoir plus sur la mise à jour de PHP"
+
+#: languages/vue.php:58
+msgid "Learn more about updating WordPress"
+msgstr "En savoir plus sur la mise à jour de WordPress"
+
+#: languages/vue.php:105
+msgid "Getting Started"
+msgstr "Mise en route"
+
+#: languages/vue.php:108
+msgid "Lite vs Pro"
+msgstr "Gratuit vs PRO"
+
+#: languages/vue.php:79 lite/includes/admin/reports/report-ecommerce.php:22
+msgid "eCommerce"
+msgstr "E-Commerce"
+
+#: languages/vue.php:89 lite/includes/admin/reports/report-forms.php:22
+msgid "Forms"
+msgstr "Formulaires"
+
+#: languages/vue.php:190
+msgid "See Quick Links"
+msgstr "Voir les liens rapides"
+
+#: languages/vue.php:1085
+msgid "Your settings have been automatically transferred."
+msgstr "Vos réglages ont été automatiquement transférés."
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:172
+msgid "Please select an option"
+msgstr "Choisir une option"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:297
+msgid "I no longer need the plugin"
+msgstr "Je n’ai plus besoin de l’extension"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:300
+msgid "I'm switching to a different plugin"
+msgstr "Je compte utiliser une autre extension"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:301
+msgid "Please share which plugin"
+msgstr "Veuillez indiquer quelle extension"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:304
+msgid "I couldn't get the plugin to work"
+msgstr "Je ne peux pas faire fonctionner l’extension"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:307
+msgid "It's a temporary deactivation"
+msgstr "C’est une désactivation temporaire"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:311
+msgid "Please share the reason"
+msgstr "Veuillez nous donner la raison"
+
+#: assets/lib/pandora/class-am-deactivation-survey.php:318
+msgid "Quick Feedback"
+msgstr "Commentaire rapide"
+
+#. Translators: Placeholder for the plugin name.
+#: assets/lib/pandora/class-am-deactivation-survey.php:322
+msgid "If you have a moment, please share why you are deactivating %s:"
+msgstr "Si vous avez un moment, merci de partager pourquoi vous désactivez %s :"
+
+#. Translators: Adds an ampersand.
+#: assets/lib/pandora/class-am-deactivation-survey.php:342
+msgid "Submit %s Deactivate"
+msgstr "Envoyer %s Désactiver"
+
+#. Translators: Adds an ampersand.
+#: assets/lib/pandora/class-am-deactivation-survey.php:348
+msgid "Skip %s Deactivate"
+msgstr "Ignorer %s et désactiver"
+
+#: languages/vue.php:14
+msgid "Error"
+msgstr "Erreur"
+
+#: languages/vue.php:17
+msgid "Please try again."
+msgstr "Veuillez réessayer."
+
+#: languages/vue.php:632
+msgid "Loading Settings"
+msgstr "Chargement des réglages"
+
+#: languages/vue.php:363
+msgid "Please wait..."
+msgstr "Veuillez patienter…"
+
+#: languages/vue.php:635
+msgid "Saving Changes..."
+msgstr "Enregistrement des modifications…"
+
+#: languages/vue.php:359
+msgid "Loading new report data"
+msgstr "Chargement de nouvelles données de rapport"
+
+#: languages/vue.php:61
+msgid "Success! "
+msgstr "Réussi !"
+
+#: languages/vue.php:34
+msgid "Overview Report"
+msgstr "Rapport global"
+
+#: languages/vue.php:20
+msgid "Loading settings"
+msgstr "Chargement des réglages"
+
+#. Translators: Number of visitors.
+#: languages/vue.php:28
+msgid "Your website was visited by %s users in the last 30 days."
+msgstr "Votre site web a été visité par %s utilisateurs au cours des 30 derniers jours."
 
 #: includes/admin/tracking.php:242
 msgid "Once Weekly"
@@ -193,98 +449,124 @@ msgstr "Une fois par semaine"
 msgid "No thanks"
 msgstr "Non merci"
 
-#: languages/vue.php:1973
+#: languages/vue.php:1471
 msgid "Hide Announcements"
 msgstr "Masquer les annonces"
 
 #. Author of the plugin
-#: lite/includes/admin/wp-site-health.php:172
-#: lite/includes/admin/wp-site-health.php:224
-#: lite/includes/admin/wp-site-health.php:251
-#: lite/includes/admin/wp-site-health.php:289
-#: lite/includes/admin/wp-site-health.php:316
-#: lite/includes/admin/wp-site-health.php:343
-#: lite/includes/admin/wp-site-health.php:368
-#: lite/includes/admin/wp-site-health.php:407
-#: lite/includes/admin/dashboard-widget.php:97 includes/admin/admin.php:31
+#: includes/emails/class-emails.php:254 includes/admin/admin.php:31
 #: includes/admin/admin.php:34 includes/admin/admin.php:42
+#: lite/includes/admin/dashboard-widget.php:97
+#: lite/includes/admin/wp-site-health.php:246
+#: lite/includes/admin/wp-site-health.php:298
+#: lite/includes/admin/wp-site-health.php:325
+#: lite/includes/admin/wp-site-health.php:363
+#: lite/includes/admin/wp-site-health.php:390
+#: lite/includes/admin/wp-site-health.php:417
+#: lite/includes/admin/wp-site-health.php:442
+#: lite/includes/admin/wp-site-health.php:481
 msgid "ExactMetrics"
 msgstr "ExactMetrics"
 
-#: languages/vue.php:1970
+#: languages/vue.php:1468
 msgid "Hides plugin announcements and update details. This includes critical notices we use to inform about deprecations and important required configuration changes."
-msgstr "Masque les annonces de l&rsquo;extension et le détail des mises à jour. Ceci inclut des notifications cruciales que nous utilisons pour annoncer des obsolescences et d'importantes modifications obligatoires de configuration."
+msgstr "Masque les annonces de l’extension et les détails de la mise à jour. Cela inclut les avis critiques que nous utilisons pour informer sur les dépréciations et les modifications de configuration importantes requises."
 
-#: languages/vue.php:1976
+#: languages/vue.php:2094
 msgid "Usage Tracking"
 msgstr "Suivi d’utilisation"
 
-#. Plugin URI of the plugin
-#. Author URI of the plugin
-msgid "https://exactmetrics.com"
-msgstr "https://exactmetrics.com"
+#. Translators: Placeholder is replaced with WPForms.
+#: languages/vue.php:178
+msgid "Recommended Plugin: %s"
+msgstr "Extensions recommandées : %s"
 
-#: languages/vue.php:765
+#: languages/vue.php:1132
 msgid "Ecommerce"
 msgstr "E-commerce"
 
-#: languages/vue.php:200
+#: languages/vue.php:301
 msgid "Custom Dimensions"
-msgstr "Tailles personnalisées"
+msgstr "Dimensions personnalisées"
 
-#. Plugin Name of the plugin
-msgid "Google Analytics Dashboard for WP (GADWP)"
-msgstr "Tableau de bord Google Analytics pour WP (GADWP)"
+#: languages/vue.php:298
+msgid "eCommerce Tracking"
+msgstr "Statistiques e-commerce :"
 
 #: assets/lib/pandora/class-am-deactivation-survey.php:310
 msgid "Other"
 msgstr "Autre"
 
-#: languages/vue.php:1156
-msgid "Bounce Rate"
-msgstr "Taux de rebond"
+#: includes/gutenberg/headline-tool/headline-tool.php:766
+msgid "technology"
+msgstr "technologie"
 
-#: languages/vue.php:393
+#: languages/vue.php:92
 msgid "Real-Time"
 msgstr "Temps réel"
 
-#: languages/vue.php:1127
+#: languages/vue.php:531
 msgid "Sessions"
 msgstr "Sessions"
 
 #: includes/admin/admin.php:34 includes/admin/admin.php:42
-#: includes/admin/admin.php:182
+#: includes/admin/admin.php:185
 msgid "Settings"
 msgstr "Réglages"
 
-#. Description of the plugin
-msgid "Displays Google Analytics Reports and Real-Time Statistics in your Dashboard. Automatically inserts the tracking code in every page of your website."
-msgstr "Affiche les Rapports de Google Analytics et les Statistiques en Temps-Réel dans votre Tableau de bord. Insère automatiquement le code de suivi dans chaque page de votre site web. "
+#. Translators: Number of days.
+#: languages/vue.php:649
+msgid "Last %s days"
+msgstr "%s derniers jours"
 
-#: languages/vue.php:1103
+#: languages/vue.php:540
+msgid "Bounce Rate"
+msgstr "Taux de rebondissement"
+
+#: includes/gutenberg/headline-tool/headline-tool.php:241
+msgid "three"
+msgstr "trois"
+
+#: languages/vue.php:1876
+msgid "Go to the Analytics Dashboard"
+msgstr "Aller au tableau de bord des statistiques"
+
+#: languages/vue.php:1037
 msgid "Advanced Tracking"
 msgstr "Suivi avancé"
 
-#: languages/vue.php:728
+#: includes/gutenberg/headline-tool/headline-tool.php:934
+msgid "video"
+msgstr "vidéo"
+
+#: languages/vue.php:700
 msgid "Google Analytics"
 msgstr "Google Analytics"
 
-#: languages/vue.php:627
+#: languages/vue.php:2154
+msgid "Yesterday"
+msgstr "Hier"
+
+#: languages/vue.php:715
 msgid "Events Tracking"
 msgstr "Évènements de suivi"
 
-#: languages/vue.php:492
+#: languages/vue.php:2151
+msgid "Today"
+msgstr "Aujourd’hui"
+
+#: languages/vue.php:205
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: languages/vue.php:973
+#: languages/vue.php:895
 msgid "Automatic Updates"
 msgstr "Mises à jour Automatiques"
 
-#: languages/vue.php:939
+#: languages/vue.php:861
 msgid "Permissions"
 msgstr "Droits"
 
-#: languages/vue.php:311
+#: languages/vue.php:652
 msgid "Analytics"
 msgstr "Statistiques"
